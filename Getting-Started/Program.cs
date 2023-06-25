@@ -1,11 +1,13 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System.Globalization;
+
 
 namespace GettingStarted { 
     // Place your classes, interfaces, enums, etc. here
 
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args) 
         {
             // Entry point of your application
             // You can write your code logic here or call other methods or classes
@@ -18,7 +20,6 @@ namespace GettingStarted {
             double distance = person.GetDistance("Warsaw");
 
             Console.WriteLine(distance);
-
 
             // declaration
             int number;
@@ -79,8 +80,6 @@ namespace GettingStarted {
 
             //dynamic
 
-
-
             //Delegates
             //delegate double Mean(double a, double b, double c);
 
@@ -100,6 +99,47 @@ namespace GettingStarted {
             //double arithmeticResult = arithmetic.Invoke(5, 6.5, 7);
             //double geometricResult = geometric.Invoke(5, 6.5, 7);
             //double harmonicResult = harmonic.Invoke(5, 6.5, 7);
+
+            // her you used the ReadLine() method,it waits until the user presses the key
+            // then the entered text is stored as a value of the fullName string variable
+            Console.Write("Enter your fullName");
+            string fullName = Console.ReadLine();
+
+            Console.WriteLine("Enter a number");
+            string numberString = Console.ReadLine();
+
+            
+            if (int.TryParse(numberString, out int number2))
+            {
+                Console.WriteLine($"{numberString} is a number which is {number2}");
+            }
+
+            Console.Write("Enter a date");
+            string dateTimeString = Console.ReadLine();
+
+            if (!DateTime.TryParseExact(
+                dateTimeString, "M/d/yyyy HH:mm", new CultureInfo("en-US"),
+                DateTimeStyles.None, out DateTime dateTime
+            ))
+            {
+                dateTime = DateTime.Now;
+            }
+
+            Console.Write("Enter a key");
+            ConsoleKeyInfo key = Console.ReadKey();
+
+            switch(key.Key)
+            {
+                case ConsoleKey.S:
+                    Console.WriteLine("Pressed S");
+                break;
+                case ConsoleKey.F1:
+                    Console.WriteLine("Pressed F1");
+                break;
+                case ConsoleKey.Escape:
+                    Console.WriteLine("Pressed Escape");
+                break;
+            }
         }
     }
 }
@@ -154,7 +194,9 @@ public static class DistanceHelpers
         var dlat = lat2 - lat1;
 
         var a = Math.Pow(Math.Sin(dlat / 2), 2) + Math.Cos(lat1) * Math.Cos(lat2) * Math.Pow(Math.Sin(dlon / 2), 2);
+
         var c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
+
         var distance = EarthRadiusKm * c;
 
         return distance;
@@ -196,4 +238,5 @@ public static class DistanceHelpers
 //    void Configure(DeviceConfiguration configuration);
 //    bool Start();
 //    bool Stop();
-//
+
+
