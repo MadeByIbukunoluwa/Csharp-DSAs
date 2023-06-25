@@ -102,10 +102,10 @@ namespace GettingStarted {
 
             // her you used the ReadLine() method,it waits until the user presses the key
             // then the entered text is stored as a value of the fullName string variable
-            Console.Write("Enter your fullName");
+            Console.Write("Enter your fullName:  ");
             string fullName = Console.ReadLine();
 
-            Console.WriteLine("Enter a number");
+            Console.WriteLine("Enter a number:  ");
             string numberString = Console.ReadLine();
 
             
@@ -114,7 +114,7 @@ namespace GettingStarted {
                 Console.WriteLine($"{numberString} is a number which is {number2}");
             }
 
-            Console.Write("Enter a date");
+            Console.Write("Enter a date:  ");
             string dateTimeString = Console.ReadLine();
 
             if (!DateTime.TryParseExact(
@@ -122,10 +122,11 @@ namespace GettingStarted {
                 DateTimeStyles.None, out DateTime dateTime
             ))
             {
-                dateTime = DateTime.Now;
+                //dateTime = DateTime.Now;
+                Console.WriteLine(dateTime);
             }
 
-            Console.Write("Enter a key");
+            Console.Write("Enter a key:  ");
             ConsoleKeyInfo key = Console.ReadKey();
 
             switch(key.Key)
@@ -140,10 +141,41 @@ namespace GettingStarted {
                     Console.WriteLine("Pressed Escape");
                 break;
             }
+            CultureInfo cultureInfo = new CultureInfo("en-US");
+
+            Console.Write("The table number");
+
+            string table = Console.ReadLine();
+
+            Console.Write("The number of people");
+
+            string countString = Console.ReadLine();
+
+            int.TryParse(countString, out int count);
+
+            Console.Write("The reservation date (MM/dd/yyyy) : ");
+
+            string dateTimeString1 = Console.ReadLine();
+
+            if (!DateTime.TryParseExact(
+                dateTimeString1,
+                "M/d/yyyy HH:mm",
+                cultureInfo,
+                DateTimeStyles.None,
+                out DateTime dateTime1))
+            {
+                dateTime1 = DateTime.Now;
+            }
+            Console.WriteLine("Table {0} has been booked for {1} people on {2} at { 3}",
+            table,
+            count,
+            dateTime.ToString("M/d/yyyy", cultureInfo),
+            dateTime.ToString("HH:mm", cultureInfo));
+
+            Console.ReadLine();
         }
     }
 }
-
 
 
 //classes

@@ -1,0 +1,15 @@
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/Getting-Started/obj/Debug/net7.0/Getting-Started.csproj.AssemblyReference.cache
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/Getting-Started/obj/Debug/net7.0/Getting-Started.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/Getting-Started/obj/Debug/net7.0/Getting-Started.AssemblyInfoInputs.cache
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/Getting-Started/obj/Debug/net7.0/Getting-Started.AssemblyInfo.cs
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/Getting-Started/obj/Debug/net7.0/Getting-Started.csproj.CoreCompileInputs.cache
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/Getting-Started/bin/Debug/net7.0/Getting-Started
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/Getting-Started/bin/Debug/net7.0/Getting-Started.deps.json
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/Getting-Started/bin/Debug/net7.0/Getting-Started.runtimeconfig.json
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/Getting-Started/bin/Debug/net7.0/Getting-Started.dll
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/Getting-Started/bin/Debug/net7.0/Getting-Started.pdb
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/Getting-Started/obj/Debug/net7.0/Getting-Started.dll
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/Getting-Started/obj/Debug/net7.0/refint/Getting-Started.dll
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/Getting-Started/obj/Debug/net7.0/Getting-Started.pdb
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/Getting-Started/obj/Debug/net7.0/Getting-Started.genruntimeconfig.cache
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/Getting-Started/obj/Debug/net7.0/ref/Getting-Started.dll
