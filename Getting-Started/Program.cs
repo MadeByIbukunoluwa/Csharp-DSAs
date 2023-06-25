@@ -78,6 +78,28 @@ namespace GettingStarted {
             int ageUnboxing = (int)ageBoxing;
 
             //dynamic
+
+
+
+            //Delegates
+            //delegate double Mean(double a, double b, double c);
+
+            //static double Harmonic(double a, double b, double c)
+            //{
+            //    return 3 / ((1 / a) + (1 / b) + (1 / c));
+            //}
+
+            //Mean arithmetic = (a, b, c) => (a + b + c) / 3;
+
+            //Mean geometric = delegate (double a, double b, double c)
+            //{
+            //    return Math.Pow(a * b * c, 1 / 3.0);
+            //};
+            //Mean harmonic = Harmonic;
+
+            //double arithmeticResult = arithmetic.Invoke(5, 6.5, 7);
+            //double geometricResult = geometric.Invoke(5, 6.5, 7);
+            //double harmonicResult = harmonic.Invoke(5, 6.5, 7);
         }
     }
 }
@@ -142,9 +164,9 @@ public static class DistanceHelpers
 
         var coordinates = new Dictionary<string, (double, double)>
         {
-            { "New York", (40.7128, -74.0060) },  // New York City coordinates
-            { "L2ondon", (51.5074, -0.1278) },
-            {"Warsaw",(52.2297,21.0122) }
+            { "New York", (40.7128, -74.0060)},  // New York City coordinates
+            { "London", (51.5074, -0.1278) },
+            { "Warsaw",(52.2297,21.0122) }
         };
 
         if (coordinates.ContainsKey(location))
@@ -161,3 +183,17 @@ public static class DistanceHelpers
         return degrees * Math.PI / 180.0;
     }
 }
+
+//interfaces
+// when a class implements the interface below, it should contain the following properties and
+//methods
+//public interface IDevice
+//{
+//    string Model { get; set; }
+//    string Number { get; set; }
+//    int Year { get; set; }
+
+//    void Configure(DeviceConfiguration configuration);
+//    bool Start();
+//    bool Stop();
+//
