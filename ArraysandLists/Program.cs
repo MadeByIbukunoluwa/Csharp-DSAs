@@ -30,13 +30,13 @@ namespace arrays
 
             for (int month = 1; month <= 12; month++)
             {
-                DateTime firstDay = new DateTime(DateTime.Now.Year,month,1);
+                DateTime firstDay = new DateTime(DateTime.Now.Year, month, 1);
                 string name = firstDay.ToString("MMMM", CultureInfo.CreateSpecificCulture("en"));
                 months[month - 1] = name;
 
 
             }
-            foreach(string month in months)
+            foreach (string month in months)
             {
                 Console.WriteLine($"--> {month}");
             }
@@ -84,8 +84,52 @@ namespace arrays
             // Game map
 
 
+            //Console.ReadLine();
+            TerrainEnum[,] map =
+            {
+                {
+                    TerrainEnum.SAND, TerrainEnum.SAND, TerrainEnum.SAND,
+                    TerrainEnum.SAND, TerrainEnum.GRASS, TerrainEnum.GRASS,
+                    TerrainEnum.GRASS, TerrainEnum.GRASS, TerrainEnum.GRASS,
+                    TerrainEnum.GRASS
+                },
+                {
+                    TerrainEnum.WATER, TerrainEnum.WATER, TerrainEnum.WATER,
+                     TerrainEnum.WATER, TerrainEnum.WATER, TerrainEnum.WATER,
+                     TerrainEnum.WATER, TerrainEnum.WALL, TerrainEnum.WATER,
+                     TerrainEnum.WATER
+                }
+            };
+
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+            for (int row = 0; row < map.GetLength(0); row++)
+            {
+                for (int column = 0; column < map.GetLength(1); column++)
+                {
+                    Console.ForegroundColor = map[row, column].GetColor();
+                    Console.Write(map[row,column].GetChar() + " ");
+                }
+                Console.WriteLine();
+            }
+            Console.ForegroundColor = ConsoleColor.Gray;
+
+            //Jagged Arrays
+            //int[][] numbersJagged = new int[4][];
+
+            //numbers[0] = new int[] { 9, 5, -9 };
+            //numbers[1] = new int[] { 0, -3, 12, 51, -3 };
+            //numbers[3] = new int[] { 54 };
+
+            int[][] numbersJagged1 =
+            {
+                new int[] {9,5,-9},
+                new int[] {0,-3, 12, 51,-3 },
+                null,
+                new int[] {54}
+            };
+            int number = numbersJagged1[1][2];
+            numbersJagged1[1][3] = 50;
         }
     }
 }
-
-

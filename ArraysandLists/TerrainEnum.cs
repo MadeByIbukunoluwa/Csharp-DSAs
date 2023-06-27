@@ -1,6 +1,6 @@
 
 
-public enum TerrrainEnum
+public enum TerrainEnum
 {
     GRASS,
     SAND,
