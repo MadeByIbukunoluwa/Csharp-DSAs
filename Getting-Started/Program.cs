@@ -143,7 +143,7 @@ namespace GettingStarted {
             }
             CultureInfo cultureInfo = new CultureInfo("en-US");
 
-            Console.Write("The table number");
+            Console.Write("The table number: ");
 
             string table = Console.ReadLine();
 

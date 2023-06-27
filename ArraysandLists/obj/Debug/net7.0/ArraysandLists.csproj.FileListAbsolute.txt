@@ -1,0 +1,15 @@
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/ArraysandLists/bin/Debug/net7.0/ArraysandLists
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/ArraysandLists/bin/Debug/net7.0/ArraysandLists.deps.json
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/ArraysandLists/bin/Debug/net7.0/ArraysandLists.runtimeconfig.json
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/ArraysandLists/bin/Debug/net7.0/ArraysandLists.dll
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/ArraysandLists/bin/Debug/net7.0/ArraysandLists.pdb
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/ArraysandLists/obj/Debug/net7.0/ArraysandLists.csproj.AssemblyReference.cache
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/ArraysandLists/obj/Debug/net7.0/ArraysandLists.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/ArraysandLists/obj/Debug/net7.0/ArraysandLists.AssemblyInfoInputs.cache
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/ArraysandLists/obj/Debug/net7.0/ArraysandLists.AssemblyInfo.cs
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/ArraysandLists/obj/Debug/net7.0/ArraysandLists.csproj.CoreCompileInputs.cache
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/ArraysandLists/obj/Debug/net7.0/ArraysandLists.dll
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/ArraysandLists/obj/Debug/net7.0/refint/ArraysandLists.dll
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/ArraysandLists/obj/Debug/net7.0/ArraysandLists.pdb
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/ArraysandLists/obj/Debug/net7.0/ArraysandLists.genruntimeconfig.cache
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/ArraysandLists/obj/Debug/net7.0/ref/ArraysandLists.dll

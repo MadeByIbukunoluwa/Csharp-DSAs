@@ -40,6 +40,52 @@ namespace arrays
             {
                 Console.WriteLine($"--> {month}");
             }
+
+            // multidimensional arrays
+            //2 dimensional array
+            // we initialized an array with five rows and two columns
+            int[,] numbersArr1 = new int[5, 2];
+
+            //3 dimensional array
+            int[,,] numbersArr2 = new int[5, 4, 3];
+
+            //2 dimensional array declared and initialized
+            int[,] numbersArr3 = new int[,] {
+                { 9, 5, -9},
+                { -11, 4, 0 },
+                { 6, 115, 3 },
+                { -12, -9, 71 },
+                { 1, -6, -1 }
+            };
+
+            //int number2 = numbersArr3[1][3];
+
+            //multiplication table
+            // build the multiplication table
+            int[,] results = new int[10, 10];
+
+            for (int i = 0; i < results.GetLength(0); i++)
+            {
+                for (int j = 0; j < results.GetLength(1); j++)
+                {
+                    results[i, j] = (i + 1) * (j + 1);
+                }
+            }
+            // display the results
+            for (int i = 0; i < results.GetLength(0); i++)
+            {
+                for (int j = 0; j < results.GetLength(1); j++)
+                {
+                    Console.WriteLine("{0,4}", results[i, j]);
+                }
+                Console.WriteLine();
+            }
+
+            // Game map
+
+
         }
     }
 }
+
+
