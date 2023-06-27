@@ -23,3 +23,9 @@ The declaration of an extension method requires you to specify it within a stati
 as a static method with the first parameter indicating the type, to which you want to "add"
 this method, with the this keyword
 
+
+## Jagged Arrays
+
+arrays of arrays
+Single dimensional array where each element is an array, such inner arrays can have different
+lengths and cannot even be initialized 
