@@ -52,3 +52,37 @@ In summary, jagged arrays are arrays of arrays with varying lengths for each inn
 
 
 
+## ArrayList
+a data structure that makes it possible to dynamically increase the size of the collection if necessary
+it has a lot of features but it is not a strongly typed list
+
+## List
+
+
+## Sorted List
+automatically sorted by names
+
+
+## Linked List
+how can we move to the next element of a collection ?
+we can have pointers to the next element
+
+With this approach, you can easily navigate from one element to the next one using
+the Next property. Such a structure is named the single-linked list. However,
+can it be further expanded by adding the Previous property to allow navigating in forward
+and backward directions? Of course! Such a data structure is named the double-linked list
+
+
+The double linked list has the first property pointing to the first element
+in the list it also has the previous and next property that point to the previous
+and next element in the list , if there is not previous or next element in the list
+respectively , then it points to NULL
+
+
+## Circular Linked List
+Instead of the previous property of the first node pointing to null and the next property of the last node pointing to null
+in a normal linked list ,
+here, the Previous property of the first node navigates to the last one,
+while the Next property of the last node navigates to the first.
+This data structure can be useful in some specific cases 
+

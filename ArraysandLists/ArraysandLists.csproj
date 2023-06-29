@@ -7,4 +7,11 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="TransportEnum" />
+    <None Remove="TransportEnum.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="TransportEnum" />
+  </ItemGroup>
 </Project>

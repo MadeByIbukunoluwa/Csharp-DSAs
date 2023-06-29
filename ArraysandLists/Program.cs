@@ -393,7 +393,7 @@ namespace arrays
 
             LinkedListNode<Page> current = pages.First;
 
-            int numberLocal = 1;
+            int numberOfPage = 1;
 
             static string GetSpaces(int number)
             {
@@ -409,7 +409,7 @@ namespace arrays
             while (current != null)
             {
                 Console.Clear();
-                string numberString = $"- {number} -";
+                string numberString = $"- {numberOfPage} -";
                 int leadingSpaces = (90 - numberString.Length) / 2;
                 Console.WriteLine(numberString.PadLeft(leadingSpaces + numberString.Length));
                 Console.WriteLine();
@@ -417,9 +417,11 @@ namespace arrays
 
                 for (int i = 0; i < content.Length; i += 90)
                 {
-                    string line = content.Substring(i); 
-                    line = content.Length > 90 ? content.Substring(0,90) : line;
-                    Console.WriteLine(line);
+                    string line = content.Substring(i);
+                    //line = content.Length > 90 ? content.Substring(0,90) : line;
+                    //Console.WriteLine(content.Length);
+                    Console.Write(line);
+                    //Console.WriteLine(content);
                 }
                     Console.WriteLine();
                     Console.WriteLine("Quote from 'Windows Application Development Cookbook' " +
@@ -437,14 +439,14 @@ namespace arrays
                             if (current.Next != null)
                         {
                             current = current.Next;
-                            number++;
+                            numberOfPage++;
                         }
                         break;
                         case ConsoleKey.P:
                             if (current.Previous != null)
                         {
                             current = current.Previous;
-                            number--;
+                            numberOfPage--;
                         }
                         break;
                     default:
