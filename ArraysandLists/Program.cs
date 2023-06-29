@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using System.Collections;
 
 namespace arrays
 {
@@ -133,16 +134,21 @@ namespace arrays
 
             Random random = new Random();
 
+            // get the number types of transport from getting the enum length
             int TransportTypesCount = Enum.GetNames(typeof(TransportEnum)).Length;
+
+            // initialize a jagged array with 12 elements, each is a one dimensional array
 
             TransportEnum[][] transport = new TransportEnum[12][];
 
             for (int month = 1; month <= 12; month++)
             {
+                //get the number of days in a month 
                 int DaysCount = DateTime.DaysInMonth(DateTime.Now.Year, month);
 
                transport[month - 1] = new TransportEnum[DaysCount];
 
+                // populate all the days in the month with random enum types
                 for (int day = 1;day <= DaysCount; day++)
                 {
                    int randomType = random.Next(0,TransportTypesCount);
@@ -158,6 +164,7 @@ namespace arrays
             for (int month = 1; month <= transport.Length; month++)
             {
                 Console.Write($"{monthNames[month - 1]}:".PadRight(monthNamesPart));
+
                 for (int day = 1; day <= transport[month - 1].Length; day++)
                 {
                     Console.ForegroundColor = ConsoleColor.White;
@@ -187,6 +194,93 @@ namespace arrays
                 return names;
             }
 
+            //lists
+            // add an element or elements to an arraylist 
+            ArrayList arrayList = new ArrayList();
+            arrayList.Add(5);
+            arrayList.AddRange(new int[] { 6, -7, 8 });
+            arrayList.AddRange(new object[] { "Marcin", "Mary" });
+            arrayList.Insert(5, 9.8);
+
+            object first = arrayList[0];
+            // this casting is necessary, because the array list stores object values
+            int third = (int)arrayList[2];
+
+            foreach(object element in arrayList)
+            {
+                Console.WriteLine(element);
+            }
+            // count returns the number of elements stored in the arrayList
+            int count = arrayList.Count;
+            // capacity returns the how many elements can be stored within it 
+            int capacity = arrayList.Capacity;
+
+            //check if arraylist contains element with a particular value
+            bool containsMary = arrayList.Contains("Mary");
+
+            // find the index of an element
+            //first occurrence of an element
+            int minusIndex = arrayList.IndexOf(-7);
+
+            //last occurence of an element
+            int minusIndexLast = arrayList.LastIndexOf(-7);
+
+            arrayList.Remove(5);
+
+            Console.WriteLine(containsMary.ToString());
+            Console.WriteLine(capacity.ToString());
+            Console.WriteLine(minusIndex.ToString());
+            Console.WriteLine(minusIndexLast.ToString());
+            //Generic List
+            //average value
+            List<double> numbersList = new List<double>();
+
+            do
+            {
+                Console.Write("Enter a number:");
+
+                string numberString = Console.ReadLine();
+
+                if (!double.TryParse(numberString,NumberStyles.Float,new NumberFormatInfo(),out double numberResult))
+                {
+                    break;
+                }
+                numbersList.Add(numberResult);
+                Console.WriteLine($"The average value is {numbers.Average()} ");
+            }
+            while (true);
+
+
+
+            //list of people
+            // add people to the people list
+            List<Person> people = new List<Person>();
+            people.Add(new Person()
+            {
+                name = "Marcello",
+                Country = CountryEnum.PL,
+                age = 36
+            });
+            people.Add(new Person()
+            {
+                name = "Rinola",
+                Country = CountryEnum.DE,
+                age = 23
+            });
+            people.Add(new Person()
+            {
+                name = "letam",
+                Country = CountryEnum.UK,
+                age = 23
+            });
+
+            // Here we used a lINQ expression to 
+            List<Person> results1 = people.OrderBy(p => p.name).ToList();
+
+            foreach(Person person in people)
+            {
+                Console.WriteLine($"{person.name} {person.age} years from {person.Country}");
+            }
 
         }
     }
