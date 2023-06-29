@@ -255,6 +255,7 @@ namespace arrays
             //list of people
             // add people to the people list
             List<Person> people = new List<Person>();
+
             people.Add(new Person()
             {
                 name = "Marcello",
@@ -281,6 +282,176 @@ namespace arrays
             {
                 Console.WriteLine($"{person.name} {person.age} years from {person.Country}");
             }
+            // selects the names of all people whose age is lower than or equal to 30
+            //years and orders them , then returns them as a list 
+
+            List<string> names = people.Where(p => p.age <= 30)
+                .OrderBy(p => p.name)
+                .Select(p => p.name)
+                .ToList();
+            // we can also achieve this with the query syntax
+            List<string> namesQuery = (from p in people
+                                       where p.age <= 30
+                                       orderby p.name
+                                       select p.name).ToList();
+
+            //Sorted Lists
+
+            SortedList<string, Person> peopleSorted = new SortedList<string, Person>();
+
+
+            people.Add(new Person()
+            {
+                name = "Marcello",
+                Country = CountryEnum.PL,
+                age = 36
+            });
+            people.Add(new Person()
+            {
+                name = "Rinola",
+                Country = CountryEnum.DE,
+                age = 23
+            });
+            people.Add(new Person()
+            {
+                name = "letam",
+                Country = CountryEnum.UK,
+                age = 23
+            });
+
+            //When all the data are stored within the collection, you can easily iterate through its elements
+            //    (key - value pairs) using the foreach loop.It is worth mentioning that
+            //    a type of the variable used in the loop is KeyValuePair<string, Person>.Thus, you need to use the Key
+            //    and Value properties to get access to a key and a value
+            foreach (KeyValuePair<string,Person> person in peopleSorted)
+            {
+                Console.WriteLine($"{person.Value.name}{person.Value.age}from {person.Value.Country}");
+            }
+
+            //Linked Lists
+            //Book Reader
+            // create new pages
+            Page page1 = new Page() { Content = "Common sense, often regarded as an innate gift, is a remarkable trait that allows individuals to navigate the complexities of " +
+                "life with wisdom and prudence. It is an intuitive understanding of what is sensible and logical in a given situation, enabling people to make sound judgments and decisions." +
+                " Common sense acts as a compass, guiding us through the intricacies of everyday challenges and helping us avoid unnecessary pitfalls. While education and knowledge are valuable, " +
+                "common sense remains a vital component in our lives. It encourages practicality, critical thinking, and an awareness of consequences. Embracing common sense leads to " +
+                "well-rounded individuals who can thrive in both personal and professional spheres. In a world that often complicates matters unnecessarily, the power of common sense should never be underestimated." };
+            Page page2 = new Page() { Content = "Systems thinking is an invaluable approach that allows us to perceive the world in its entirety, acknowledging " +
+                "the interconnectedness and interdependence of various elements within a system. It goes beyond linear thinking and embraces complexity, " +
+                "recognizing that actions and events are shaped by multiple factors and relationships. By adopting systems thinking, we gain a holistic " +
+                "understanding of the world, enabling us to uncover the hidden dynamics and unintended consequences of our decisions." +
+                " This approach empowers us to identify leverage points and find sustainable solutions to complex problems. Systems thinking" +
+                " encourages collaboration, as it emphasizes the importance of collective intelligence and the impact of interconnected systems on our lives." +
+                " In an increasingly interconnected and interdependent world, systems thinking is an essential tool for navigating the challenges and complexities " +
+                "we face, enabling us to create positive change and build a more sustainable future.\n\n\n\n\n\n\n" };
+            Page page3 = new Page() { Content = "Logic, often hailed as the cornerstone of rationality, is a powerful tool that enables us to reason, analyze, and make " +
+                "sound judgments. Rooted in a systematic and coherent framework, logic provides us with a foundation for critical thinking and problem-solving. " +
+                "It helps us identify fallacies, detect inconsistencies, and construct valid arguments. By employing logical principles, " +
+                "we can navigate through complex information, unraveling the truth from the sea of biases and misconceptions. Logic fosters " +
+                "clarity of thought and promotes intellectual rigor, allowing us to approach challenges with a rational mindset. It empowers us to evaluate ideas, " +
+                "weigh evidence, and form well-founded conclusions. In a world inundated with information, the power of logic serves as a compass, guiding us towards " +
+                "reliable knowledge and rational decision-making. By embracing logic, we unlock the ability to think critically, ensuring that reason triumphs over mere conjecture.\n\n\n\n\n\n" };
+            Page page4 = new Page() { Content = "The intricacies of human mating encompass a complex interplay of biological, psychological, and sociocultural factors that " +
+                "shape our reproductive behavior. At the biological level, hormones such as testosterone and estrogen influence sexual desire and attraction. " +
+                "Evolutionary psychology suggests that mate selection is influenced by innate preferences shaped by our ancestors' reproductive success, " +
+                "such as physical attractiveness, fertility cues, and indicators of genetic fitness. Psychological factors, such as personal preferences, " +
+                "personality traits, and attachment styles, also play a significant role in mate choice. Sociocultural influences, including societal norms, " +
+                "cultural values, and gender roles, further shape mating patterns and expectations. Additionally, factors like social status, resources, and " +
+                "mutual compatibility contribute to the complexity of human mating dynamics. Understanding these intricacies can provide insights into the multifaceted nature" +
+                " of human relationships and the diverse strategies employed in the pursuit of romantic partnerships.\n\n\n\n\n\n\n" };
+            Page page5 = new Page() { Content = "The concept of God has been a subject of profound contemplation and diverse interpretations across cultures and throughout history." +
+                " While the understanding of God varies greatly among individuals and belief systems, the notion generally refers to a supreme being or a transcendent entity " +
+                "that is revered as the creator and sustainer of the universe. Religions provide frameworks through which people conceptualize and relate to the " +
+                "divine, offering teachings, rituals, and moral guidance. Different religious traditions depict God with unique attributes and characteristics, " +
+                "including omnipotence, omniscience, benevolence, and immanence. For some, God represents a personal and loving deity, while for others, " +
+                "God is seen as an impersonal force or a cosmic consciousness. Beyond religious contexts, philosophical inquiries and personal experiences " +
+                "shape individuals' perspectives on the nature of God. Some perceive God as a source of meaning, purpose, and moral guidance, while others" +
+                " grapple with questions of existence and the problem of evil. Ultimately, the concept of God is deeply intertwined with humanity's search " +
+                "for answers to existential questions and the desire for a connection to something greater than ourselves. It remains a subject of ongoing exploration, debate, and personal belief.\n\n\n\n\n\n\n" };
+            Page page6 = new Page() { Content = "The inconsistency avoidance tendency is a cognitive bias that highlights our inclination to seek consistency and coherence in our beliefs, " +
+                "attitudes, and actions. It stems from our innate desire to avoid cognitive dissonance, the uncomfortable state of holding conflicting or contradictory thoughts simultaneously. " +
+                "Humans tend to strive for internal harmony by aligning their beliefs and behaviors to reduce this dissonance.\n\nThis tendency manifests in various ways. " +
+                "We tend to interpret new information in a way that aligns with our existing beliefs, selectively seeking out evidence that supports our preconceived notions. " +
+                "We may also engage in rationalization, finding justifications or excuses to maintain consistency and avoid the discomfort of cognitive dissonance." +
+                "\n\nWhile the inconsistency avoidance tendency helps maintain psychological stability, it can hinder rational thinking and objective decision-making. " +
+                "It may prevent us from critically evaluating new information and considering alternative viewpoints, leading to confirmation bias and closed-mindedness.\n\n" +
+                "Recognizing and managing this tendency is crucial for fostering intellectual growth and maintaining an open, adaptable mindset. " +
+                "Embracing cognitive flexibility allows us to challenge our beliefs, entertain diverse perspectives, and embrace the inherent complexities and nuances of reality." +
+                " By actively seeking out cognitive dissonance and using it as an opportunity for growth, we can overcome the limitations imposed by the inconsistency avoidance tendency" +
+                " and approach situations with a more rational and balanced mindset.\n\nIn conclusion, the inconsistency avoidance tendency highlights our inclination to seek consistency " +
+                "in our beliefs and actions. While it serves to maintain cognitive harmony, it can hinder rational thinking. By actively confronting cognitive dissonance and " +
+                "embracing cognitive flexibility, we can cultivate a more open-minded and rational approach to decision-making, enabling personal growth and intellectual development.\n\n\n\n\n" };
+
+            //create the linkedList
+            LinkedList<Page> pages = new LinkedList<Page>();
+            pages.AddLast(page2);
+            LinkedListNode<Page> nodePage4 = pages.AddLast(page4);
+            pages.AddLast(page6);
+            pages.AddFirst(page1);
+            pages.AddBefore(nodePage4,page3);
+            pages.AddAfter(nodePage4,page5);
+
+            LinkedListNode<Page> current = pages.First;
+
+            int numberLocal = 1;
+
+            static string GetSpaces(int number)
+            {
+
+                string result = string.Empty;
+                for (int i = 0; i < number; i++)
+                {
+                    result += " ";
+                }
+                return result;
+            }
+
+            while (current != null)
+            {
+                Console.Clear();
+                string numberString = $"- {number} -";
+                int leadingSpaces = (90 - numberString.Length) / 2;
+                Console.WriteLine(numberString.PadLeft(leadingSpaces + numberString.Length));
+                Console.WriteLine();
+                string content = current.Value.Content;
+
+                for (int i = 0; i < content.Length; i += 90)
+                {
+                    string line = content.Substring(i); 
+                    line = content.Length > 90 ? content.Substring(0,90) : line;
+                    Console.WriteLine(line);
+                }
+                    Console.WriteLine();
+                    Console.WriteLine("Quote from 'Windows Application Development Cookbook' " +
+                        "by Marcin Jamro,\npublished by Packt Publishing in 2016.");
+                    Console.WriteLine();
+                    Console.WriteLine(current.Previous != null ? "< PREVIOUS [P]" : GetSpaces(14));
+                    Console.WriteLine(current.Next != null ? "> NEXT [N] ".PadLeft(76): String.Empty);
+                    Console.WriteLine();
+
+                ConsoleKey key = Console.ReadKey(true).Key;
+
+                    switch(key)
+                    {
+                        case ConsoleKey.N:
+                            if (current.Next != null)
+                        {
+                            current = current.Next;
+                            number++;
+                        }
+                        break;
+                        case ConsoleKey.P:
+                            if (current.Previous != null)
+                        {
+                            current = current.Previous;
+                            number--;
+                        }
+                        break;
+                    default:
+                       return; 
+                    }
+            }
+
 
         }
     }
