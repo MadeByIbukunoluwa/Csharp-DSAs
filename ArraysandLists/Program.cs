@@ -109,7 +109,7 @@ namespace arrays
                 for (int column = 0; column < map.GetLength(1); column++)
                 {
                     Console.ForegroundColor = map[row, column].GetColor();
-                    Console.Write(map[row,column].GetChar() + " ");
+                    Console.Write(map[row, column].GetChar() + " ");
                 }
                 Console.WriteLine();
             }
@@ -146,14 +146,14 @@ namespace arrays
                 //get the number of days in a month 
                 int DaysCount = DateTime.DaysInMonth(DateTime.Now.Year, month);
 
-               transport[month - 1] = new TransportEnum[DaysCount];
+                transport[month - 1] = new TransportEnum[DaysCount];
 
                 // populate all the days in the month with random enum types
-                for (int day = 1;day <= DaysCount; day++)
+                for (int day = 1; day <= DaysCount; day++)
                 {
-                   int randomType = random.Next(0,TransportTypesCount);
+                    int randomType = random.Next(0, TransportTypesCount);
 
-                   transport[month - 1][day - 1] = (TransportEnum)randomType;
+                    transport[month - 1][day - 1] = (TransportEnum)randomType;
                 }
             }
 
@@ -206,7 +206,7 @@ namespace arrays
             // this casting is necessary, because the array list stores object values
             int third = (int)arrayList[2];
 
-            foreach(object element in arrayList)
+            foreach (object element in arrayList)
             {
                 Console.WriteLine(element);
             }
@@ -241,7 +241,7 @@ namespace arrays
 
                 string numberString = Console.ReadLine();
 
-                if (!double.TryParse(numberString,NumberStyles.Float,new NumberFormatInfo(),out double numberResult))
+                if (!double.TryParse(numberString, NumberStyles.Float, new NumberFormatInfo(), out double numberResult))
                 {
                     break;
                 }
@@ -278,7 +278,7 @@ namespace arrays
             // Here we used a lINQ expression to 
             List<Person> results1 = people.OrderBy(p => p.name).ToList();
 
-            foreach(Person person in people)
+            foreach (Person person in people)
             {
                 Console.WriteLine($"{person.name} {person.age} years from {person.Country}");
             }
@@ -323,7 +323,7 @@ namespace arrays
             //    (key - value pairs) using the foreach loop.It is worth mentioning that
             //    a type of the variable used in the loop is KeyValuePair<string, Person>.Thus, you need to use the Key
             //    and Value properties to get access to a key and a value
-            foreach (KeyValuePair<string,Person> person in peopleSorted)
+            foreach (KeyValuePair<string, Person> person in peopleSorted)
             {
                 Console.WriteLine($"{person.Value.name}{person.Value.age}from {person.Value.Country}");
             }
@@ -331,35 +331,49 @@ namespace arrays
             //Linked Lists
             //Book Reader
             // create new pages
-            Page page1 = new Page() { Content = "Common sense, often regarded as an innate gift, is a remarkable trait that allows individuals to navigate the complexities of " +
+            Page page1 = new Page()
+            {
+                Content = "Common sense, often regarded as an innate gift, is a remarkable trait that allows individuals to navigate the complexities of " +
                 "life with wisdom and prudence. It is an intuitive understanding of what is sensible and logical in a given situation, enabling people to make sound judgments and decisions." +
                 " Common sense acts as a compass, guiding us through the intricacies of everyday challenges and helping us avoid unnecessary pitfalls. While education and knowledge are valuable, " +
                 "common sense remains a vital component in our lives. It encourages practicality, critical thinking, and an awareness of consequences. Embracing common sense leads to " +
-                "well-rounded individuals who can thrive in both personal and professional spheres. In a world that often complicates matters unnecessarily, the power of common sense should never be underestimated." };
-            Page page2 = new Page() { Content = "Systems thinking is an invaluable approach that allows us to perceive the world in its entirety, acknowledging " +
+                "well-rounded individuals who can thrive in both personal and professional spheres. In a world that often complicates matters unnecessarily, the power of common sense should never be underestimated."
+            };
+            Page page2 = new Page()
+            {
+                Content = "Systems thinking is an invaluable approach that allows us to perceive the world in its entirety, acknowledging " +
                 "the interconnectedness and interdependence of various elements within a system. It goes beyond linear thinking and embraces complexity, " +
                 "recognizing that actions and events are shaped by multiple factors and relationships. By adopting systems thinking, we gain a holistic " +
                 "understanding of the world, enabling us to uncover the hidden dynamics and unintended consequences of our decisions." +
                 " This approach empowers us to identify leverage points and find sustainable solutions to complex problems. Systems thinking" +
                 " encourages collaboration, as it emphasizes the importance of collective intelligence and the impact of interconnected systems on our lives." +
                 " In an increasingly interconnected and interdependent world, systems thinking is an essential tool for navigating the challenges and complexities " +
-                "we face, enabling us to create positive change and build a more sustainable future.\n\n\n\n\n\n\n" };
-            Page page3 = new Page() { Content = "Logic, often hailed as the cornerstone of rationality, is a powerful tool that enables us to reason, analyze, and make " +
+                "we face, enabling us to create positive change and build a more sustainable future.\n\n\n\n\n\n\n"
+            };
+            Page page3 = new Page()
+            {
+                Content = "Logic, often hailed as the cornerstone of rationality, is a powerful tool that enables us to reason, analyze, and make " +
                 "sound judgments. Rooted in a systematic and coherent framework, logic provides us with a foundation for critical thinking and problem-solving. " +
                 "It helps us identify fallacies, detect inconsistencies, and construct valid arguments. By employing logical principles, " +
                 "we can navigate through complex information, unraveling the truth from the sea of biases and misconceptions. Logic fosters " +
                 "clarity of thought and promotes intellectual rigor, allowing us to approach challenges with a rational mindset. It empowers us to evaluate ideas, " +
                 "weigh evidence, and form well-founded conclusions. In a world inundated with information, the power of logic serves as a compass, guiding us towards " +
-                "reliable knowledge and rational decision-making. By embracing logic, we unlock the ability to think critically, ensuring that reason triumphs over mere conjecture.\n\n\n\n\n\n" };
-            Page page4 = new Page() { Content = "The intricacies of human mating encompass a complex interplay of biological, psychological, and sociocultural factors that " +
+                "reliable knowledge and rational decision-making. By embracing logic, we unlock the ability to think critically, ensuring that reason triumphs over mere conjecture.\n\n\n\n\n\n"
+            };
+            Page page4 = new Page()
+            {
+                Content = "The intricacies of human mating encompass a complex interplay of biological, psychological, and sociocultural factors that " +
                 "shape our reproductive behavior. At the biological level, hormones such as testosterone and estrogen influence sexual desire and attraction. " +
                 "Evolutionary psychology suggests that mate selection is influenced by innate preferences shaped by our ancestors' reproductive success, " +
                 "such as physical attractiveness, fertility cues, and indicators of genetic fitness. Psychological factors, such as personal preferences, " +
                 "personality traits, and attachment styles, also play a significant role in mate choice. Sociocultural influences, including societal norms, " +
                 "cultural values, and gender roles, further shape mating patterns and expectations. Additionally, factors like social status, resources, and " +
                 "mutual compatibility contribute to the complexity of human mating dynamics. Understanding these intricacies can provide insights into the multifaceted nature" +
-                " of human relationships and the diverse strategies employed in the pursuit of romantic partnerships.\n\n\n\n\n\n\n" };
-            Page page5 = new Page() { Content = "The concept of God has been a subject of profound contemplation and diverse interpretations across cultures and throughout history." +
+                " of human relationships and the diverse strategies employed in the pursuit of romantic partnerships.\n\n\n\n\n\n\n"
+            };
+            Page page5 = new Page()
+            {
+                Content = "The concept of God has been a subject of profound contemplation and diverse interpretations across cultures and throughout history." +
                 " While the understanding of God varies greatly among individuals and belief systems, the notion generally refers to a supreme being or a transcendent entity " +
                 "that is revered as the creator and sustainer of the universe. Religions provide frameworks through which people conceptualize and relate to the " +
                 "divine, offering teachings, rituals, and moral guidance. Different religious traditions depict God with unique attributes and characteristics, " +
@@ -367,8 +381,11 @@ namespace arrays
                 "God is seen as an impersonal force or a cosmic consciousness. Beyond religious contexts, philosophical inquiries and personal experiences " +
                 "shape individuals' perspectives on the nature of God. Some perceive God as a source of meaning, purpose, and moral guidance, while others" +
                 " grapple with questions of existence and the problem of evil. Ultimately, the concept of God is deeply intertwined with humanity's search " +
-                "for answers to existential questions and the desire for a connection to something greater than ourselves. It remains a subject of ongoing exploration, debate, and personal belief.\n\n\n\n\n\n\n" };
-            Page page6 = new Page() { Content = "The inconsistency avoidance tendency is a cognitive bias that highlights our inclination to seek consistency and coherence in our beliefs, " +
+                "for answers to existential questions and the desire for a connection to something greater than ourselves. It remains a subject of ongoing exploration, debate, and personal belief.\n\n\n\n\n\n\n"
+            };
+            Page page6 = new Page()
+            {
+                Content = "The inconsistency avoidance tendency is a cognitive bias that highlights our inclination to seek consistency and coherence in our beliefs, " +
                 "attitudes, and actions. It stems from our innate desire to avoid cognitive dissonance, the uncomfortable state of holding conflicting or contradictory thoughts simultaneously. " +
                 "Humans tend to strive for internal harmony by aligning their beliefs and behaviors to reduce this dissonance.\n\nThis tendency manifests in various ways. " +
                 "We tend to interpret new information in a way that aligns with our existing beliefs, selectively seeking out evidence that supports our preconceived notions. " +
@@ -380,81 +397,113 @@ namespace arrays
                 " By actively seeking out cognitive dissonance and using it as an opportunity for growth, we can overcome the limitations imposed by the inconsistency avoidance tendency" +
                 " and approach situations with a more rational and balanced mindset.\n\nIn conclusion, the inconsistency avoidance tendency highlights our inclination to seek consistency " +
                 "in our beliefs and actions. While it serves to maintain cognitive harmony, it can hinder rational thinking. By actively confronting cognitive dissonance and " +
-                "embracing cognitive flexibility, we can cultivate a more open-minded and rational approach to decision-making, enabling personal growth and intellectual development.\n\n\n\n\n" };
+                "embracing cognitive flexibility, we can cultivate a more open-minded and rational approach to decision-making, enabling personal growth and intellectual development.\n\n\n\n\n"
+            };
 
             //create the linkedList
-            LinkedList<Page> pages = new LinkedList<Page>();
-            pages.AddLast(page2);
-            LinkedListNode<Page> nodePage4 = pages.AddLast(page4);
-            pages.AddLast(page6);
-            pages.AddFirst(page1);
-            pages.AddBefore(nodePage4,page3);
-            pages.AddAfter(nodePage4,page5);
+            //LinkedList<Page> pages = new LinkedList<Page>();
+            //pages.AddLast(page2);
+            //LinkedListNode<Page> nodePage4 = pages.AddLast(page4);
+            //pages.AddLast(page6);
+            //pages.AddFirst(page1);
+            //pages.AddBefore(nodePage4, page3);
+            //pages.AddAfter(nodePage4, page5);
 
-            LinkedListNode<Page> current = pages.First;
+            //LinkedListNode<Page> current = pages.First;
 
-            int numberOfPage = 1;
+            //int numberOfPage = 1;
 
-            static string GetSpaces(int number)
+            //static string GetSpaces(int number)
+            //{
+
+            //    string result = string.Empty;
+            //    for (int i = 0; i < number; i++)
+            //    {
+            //        result += " ";
+            //    }
+            //    return result;
+            //}
+
+            //while (current != null)
+            //{
+            //    Console.Clear();
+            //    string numberString = $"- {numberOfPage} -";
+            //    int leadingSpaces = (90 - numberString.Length) / 2;
+            //    Console.WriteLine(numberString.PadLeft(leadingSpaces + numberString.Length));
+            //    Console.WriteLine();
+            //    string content = current.Value.Content;
+
+            //    for (int i = 0; i < content.Length; i += 90)
+            //    {
+            //        string line = content.Substring(i);
+            //        //line = content.Length > 90 ? content.Substring(0,90) : line;
+            //        //Console.WriteLine(content.Length);
+            //        Console.Write(line);
+            //        //Console.WriteLine(content);
+            //    }
+            //    Console.WriteLine();
+            //    Console.WriteLine("Quote from 'Windows Application Development Cookbook' " +
+            //        "by Marcin Jamro,\npublished by Packt Publishing in 2016.");
+            //    Console.WriteLine();
+            //    Console.WriteLine(current.Previous != null ? "< PREVIOUS [P]" : GetSpaces(14));
+            //    Console.WriteLine(current.Next != null ? "> NEXT [N] ".PadLeft(76) : String.Empty);
+            //    Console.WriteLine();
+
+            //    ConsoleKey key = Console.ReadKey(true).Key;
+
+            //    switch (key)
+            //    {
+            //        case ConsoleKey.N:
+            //            if (current.Next != null)
+            //            {
+            //                current = current.Next;
+            //                numberOfPage++;
+            //            }
+            //            break;
+            //        case ConsoleKey.P:
+            //            if (current.Previous != null)
+            //            {
+            //                current = current.Previous;
+            //                numberOfPage--;
+            //            }
+            //            break;
+            //        default:
+            //            return;
+            //    }
+            //}
+            CircularLinkedList<string> categories = new CircularLinkedList<string>();
+            categories.AddLast("Sport");
+            categories.AddLast("Culture");
+            categories.AddLast("History");
+            categories.AddLast("Geography");
+            categories.AddLast("People");
+            categories.AddLast("Nature");
+
+            Random randomInt = new Random();
+            int totalTime = 0;
+            int remainingTime = 0;
+            foreach (string category in categories)
             {
-
-                string result = string.Empty;
-                for (int i = 0; i < number; i++)
+                if (remainingTime <= 0)
                 {
-                    result += " ";
-                }
-                return result;
-            }
-
-            while (current != null)
-            {
-                Console.Clear();
-                string numberString = $"- {numberOfPage} -";
-                int leadingSpaces = (90 - numberString.Length) / 2;
-                Console.WriteLine(numberString.PadLeft(leadingSpaces + numberString.Length));
-                Console.WriteLine();
-                string content = current.Value.Content;
-
-                for (int i = 0; i < content.Length; i += 90)
-                {
-                    string line = content.Substring(i);
-                    //line = content.Length > 90 ? content.Substring(0,90) : line;
-                    //Console.WriteLine(content.Length);
-                    Console.Write(line);
-                    //Console.WriteLine(content);
-                }
-                    Console.WriteLine();
-                    Console.WriteLine("Quote from 'Windows Application Development Cookbook' " +
-                        "by Marcin Jamro,\npublished by Packt Publishing in 2016.");
-                    Console.WriteLine();
-                    Console.WriteLine(current.Previous != null ? "< PREVIOUS [P]" : GetSpaces(14));
-                    Console.WriteLine(current.Next != null ? "> NEXT [N] ".PadLeft(76): String.Empty);
-                    Console.WriteLine();
-
-                ConsoleKey key = Console.ReadKey(true).Key;
-
-                    switch(key)
+                    Console.WriteLine("Press [Enter] to start or any other key to exit");
+                    switch (Console.ReadKey().Key)
                     {
-                        case ConsoleKey.N:
-                            if (current.Next != null)
-                        {
-                            current = current.Next;
-                            numberOfPage++;
-                        }
-                        break;
-                        case ConsoleKey.P:
-                            if (current.Previous != null)
-                        {
-                            current = current.Previous;
-                            numberOfPage--;
-                        }
-                        break;
-                    default:
-                       return; 
+                        case ConsoleKey.Enter:
+                            totalTime = random.Next(1000, 5000);
+                            remainingTime = totalTime;
+                            break;
+                        default:
+                            return;
                     }
+                }
+                    int categoryTime = (-450 * remainingTime) / (totalTime - 50) + 500 + (22500 / (totalTime - 50));
+                    remainingTime -= categoryTime;
+                    Thread.Sleep(categoryTime);
+                    Console.ForegroundColor = remainingTime <= 0 ? ConsoleColor.Red : ConsoleColor.Gray;
+                    Console.WriteLine(category);
+                    Console.ForegroundColor = ConsoleColor.Gray;
             }
-
-
         }
     }
 }
