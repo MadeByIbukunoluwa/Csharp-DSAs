@@ -1,16 +1,19 @@
 ﻿<Properties StartupConfiguration="{5A57CDA1-E12F-4BB4-99B3-87380EC42611}|Default">
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CircularLinkedList/CircularLinkedList.cs">
     <Files>
-      <File FileName="Program.cs" Line="52" Column="41" />
+      <File FileName="README.md" Line="84" Column="25" IsPinned="True" />
+      <File FileName="CircularLinkedList/CircularLinkedListExtensions.cs" Line="29" Column="1" />
+      <File FileName="CountryEnum.cs" Line="1" Column="1" />
+      <File FileName="Person.cs" Line="1" Column="1" />
+      <File FileName="CircularLinkedList/CircularLinkedList.cs" Line="44" Column="31" />
+      <File FileName="BookReader/Page.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ArraysandLists" expanded="True">
-            <Node name="ArraysandLists" expanded="True">
-              <Node name="Program.cs" selected="True" />
-            </Node>
+            <Node name="ArraysandLists" expanded="True" />
           </Node>
         </State>
       </Pad>
