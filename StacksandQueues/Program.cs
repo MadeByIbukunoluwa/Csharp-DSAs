@@ -1,6 +1,8 @@
 ﻿
 
 using System;
+using System.Threading.Tasks;
+using System.Collections.Concurrent;
 
 namespace StacksAndQueues
 {
@@ -31,35 +33,44 @@ namespace StacksAndQueues
             //Algorithm_Visualize(algorithm, EventArgs.Empty);
             //algorithm.Start();
 
-            Random random = new Random();
+            //Random random = new Random();
 
-            CallCenter center = new CallCenter();
+            //CallCenter center = new CallCenter();
 
-            center.Call(1234);
-            center.Call(5678);
-            center.Call(1468);
-            center.Call(9641);
+            //center.Call(1234);
+            //center.Call(5678);
+            //center.Call(1468);
+            //center.Call(9641);
+
+            //Console.WriteLine(center.Calls.Count);
+
+            //while (center.AreWaitingCalls())
+
+            //{
+            //    IncomingCall call = center.Answer("Marcin");
+
+            //    Log($"Call #{call.Id} from {call.ClientId} " +
+            //        $"is answered by {call.Consultant}.");
+
+            //    Thread.Sleep(random.Next(1000, 10000));
+
+            //    center.End(call);
+
+            //    Log($"Call #{call.Id} from {call.ClientId} " +
+            //        $"is ended by {call.Consultant}."); 
+            //}
+
+            CallCenterConcurrent center1 = new CallCenterConcurrent();
+
+            Parallel.Invoke(
+                () => CallersAction(center1),
+                () => ConsultantAction(center1, "Ibukunoluwa", ConsoleColor.Red),
+                () => ConsultantAction(center1, "Temidayo", ConsoleColor.Yellow),
+                () => ConsultantAction(center1, "BinLaden" ,ConsoleColor.Green)
+            );
 
 
 
-            Console.WriteLine(center.Calls.Count);
-
-            while (center.AreWaitingCalls())
-
-            {
-
-                IncomingCall call = center.Answer("Marcin");
-
-                Log($"Call #{call.Id} from {call.ClientId} " +
-                    $"is answered by {call.Consultant}.");
-
-                Thread.Sleep(random.Next(1000, 10000));
-
-                center.End(call);
-
-                Log($"Call #{call.Id} from {call.ClientId} " +
-                    $"is ended by {call.Consultant}."); 
-            }
         }
         private static void Algorithm_Visualize(object sender, EventArgs e)
         {
@@ -150,7 +161,8 @@ namespace StacksAndQueues
             {
                 Calls = new Queue<IncomingCall>();
             }
-            public void Call(int clientId)
+
+            public int Call(int clientId)
             {
                 IncomingCall call = new IncomingCall()
                 {
@@ -159,7 +171,9 @@ namespace StacksAndQueues
                     CallTime = DateTime.Now
                 };
                 Calls.Enqueue(call);
+                return Calls.Count;
             }
+
             public IncomingCall Answer(string consultant)
             {
                 if (Calls.Count > 0)
@@ -171,6 +185,7 @@ namespace StacksAndQueues
                 }
                 return null;
             }
+
             public void End(IncomingCall call)
             {
                 call.EndTime = DateTime.Now;
@@ -185,6 +200,97 @@ namespace StacksAndQueues
         {
             Console.WriteLine($"[{DateTime.Now.ToString("HH:mm:ss")}] {text}");
         }
+
         //Call Center with multiple Consultants
+        public class CallCenterConcurrent
+        {
+            private int _counter = 0;
+            public ConcurrentQueue<IncomingCall> Calls { get; private set; }
+
+            public CallCenterConcurrent()
+            {
+                Calls = new ConcurrentQueue<IncomingCall>();
+            }
+            public IncomingCall AnswerConcurrent(string consultant)
+            {
+                if (Calls.Count > 0 && Calls.TryDequeue(out IncomingCall call))
+                {
+                    call.Consultant = consultant;
+                    call.StartTime = DateTime.Now;
+                    return call;
+                }
+                return null;
+            }
+            public int Call(int clientId)
+            {
+                IncomingCall call = new IncomingCall()
+                {
+                    Id = ++_counter,
+                    ClientId = clientId,
+                    CallTime = DateTime.Now
+                };
+                Calls.Enqueue(call);
+                return Calls.Count;
+            }
+            public void End(IncomingCall call)
+            {
+                call.EndTime = DateTime.Now;
+            }
+            public bool AreWaitingCalls()
+            {
+                return Calls.Count > 0;
+            }
+            private static void Log(string text)
+            {
+                Console.WriteLine($"[{DateTime.Now.ToString("HH:mm:ss")}] {text}");
+            }
+        }
+        //CallersAction and ConsultantAction
+        private static void CallersAction(CallCenterConcurrent center)
+        {
+            Random random = new Random();
+            while(true)
+            {
+                int clientId = random.Next(1,9999);
+
+                int waitingCount = center.Call(clientId);
+
+                Log($"Incoming call from {clientId} waiting in the queue: {waitingCount}");
+
+                Thread.Sleep(random.Next(1000,5000));
+            }
+        }
+
+        private static void ConsultantAction(CallCenterConcurrent center, string name, ConsoleColor color)
+        {
+            Random random = new Random();
+            while (true)
+            {
+                IncomingCall call = center.AnswerConcurrent(name);
+                if (call != null)
+                {
+                    Console.ForegroundColor = color;
+                    Log($"Call #{call.Id} from {call.ClientId} is answered by {call.Consultant}");
+                    Console.ForegroundColor = ConsoleColor.Gray;
+
+                    Thread.Sleep(random.Next(1000, 10000));
+                    center.End(call);
+
+                    Console.ForegroundColor = color;
+                    Log($"Call #{call.Id} from {call.ClientId} is answered by {call.Consultant}");
+                    Console.ForegroundColor = ConsoleColor.Gray;
+
+                    Thread.Sleep(random.Next(500, 1000));
+                } else
+                {
+                    Thread.Sleep(100);
+                }
+
+            }
+
+            //Call center with priority support
+
+
+        }
     }
 }
