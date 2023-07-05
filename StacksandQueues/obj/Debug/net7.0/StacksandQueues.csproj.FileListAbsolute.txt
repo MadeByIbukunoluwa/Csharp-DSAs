@@ -1,0 +1,15 @@
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/StacksandQueues/bin/Debug/net7.0/StacksandQueues
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/StacksandQueues/bin/Debug/net7.0/StacksandQueues.deps.json
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/StacksandQueues/bin/Debug/net7.0/StacksandQueues.runtimeconfig.json
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/StacksandQueues/bin/Debug/net7.0/StacksandQueues.dll
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/StacksandQueues/bin/Debug/net7.0/StacksandQueues.pdb
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/StacksandQueues/obj/Debug/net7.0/StacksandQueues.csproj.AssemblyReference.cache
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/StacksandQueues/obj/Debug/net7.0/StacksandQueues.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/StacksandQueues/obj/Debug/net7.0/StacksandQueues.AssemblyInfoInputs.cache
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/StacksandQueues/obj/Debug/net7.0/StacksandQueues.AssemblyInfo.cs
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/StacksandQueues/obj/Debug/net7.0/StacksandQueues.csproj.CoreCompileInputs.cache
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/StacksandQueues/obj/Debug/net7.0/StacksandQueues.dll
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/StacksandQueues/obj/Debug/net7.0/refint/StacksandQueues.dll
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/StacksandQueues/obj/Debug/net7.0/StacksandQueues.pdb
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/StacksandQueues/obj/Debug/net7.0/StacksandQueues.genruntimeconfig.cache
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/StacksandQueues/obj/Debug/net7.0/ref/StacksandQueues.dll

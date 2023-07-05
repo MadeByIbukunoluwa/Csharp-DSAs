@@ -1,0 +1,43 @@
+namespace HanoiTowers
+{
+    public class HanoiTower
+    {
+        public int DiscsCount { get; private set; }
+        public int MovesCount { get; private set; }
+        public Stack<int> From { get; private set; }
+        public Stack<int> To { get; private set; }
+        public Stack<int> Auxiliary { get; private set; }
+        public event EventHandler<EventArgs> MoveCompleted;
+
+        public HanoiTower(int discs)
+        {
+            this.DiscsCount = discs;
+            From = new Stack<int>();
+            To = new Stack<int>();
+            Auxiliary = new Stack<int>();
+            // the for loop is used to create the necessary number of discs and add them onto the From stack (which is the first stack)
+            // note that each disc is represented by an integer value
+
+            for (int i = 0; i <= discs; i++)
+            {
+                int size = (discs - i + 1);
+                From.Push(size);
+            }
+        }
+        public void Start()
+        {
+            Move(DiscsCount, From, To, Auxiliary);
+        }
+        public void Move(int discs, Stack<int> from, Stack<int> to, Stack<int> auxiliary)
+        {
+            if (discs > 0)
+            {
+                Move(discs - 1, from, auxiliary, to);
+                to.Push(from.Pop());
+                MovesCount++;
+                MoveCompleted?.Invoke(this, EventArgs.Empty);
+                Move(discs - 1, auxiliary, to, from);
+            }
+        }
+    }
+}
