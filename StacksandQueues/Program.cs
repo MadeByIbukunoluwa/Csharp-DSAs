@@ -2,7 +2,7 @@
 
 using System;
 
-namespace HanoiTowers
+namespace StacksAndQueues
 {
     class Program
     {
@@ -13,16 +13,16 @@ namespace HanoiTowers
          static void Main(string[] args)
         {
             //Reversing strings
-            Stack<char> chars = new Stack<char>();
-            foreach (char c in "LETS REVERSE")
-            {
-                chars.Push(c);
-            }
-            while (chars.Count > 0)
-            {
-                Console.WriteLine(chars.Pop());
-            }
-            Console.WriteLine();
+            //Stack<char> chars = new Stack<char>();
+            //foreach (char c in "LETS REVERSE")
+            //{
+            //    chars.Push(c);
+            //}
+            //while (chars.Count > 0)
+            //{
+            //    Console.WriteLine(chars.Pop());
+            //}
+            //Console.WriteLine();
 
             //Tower of Hanoi
             //_columnSize = Math.Max(6, GetDiscsWidth(DISCS_COUNT));
@@ -30,6 +30,7 @@ namespace HanoiTowers
             //algorithm.MoveCompleted += Algorithm_Visualize;
             //Algorithm_Visualize(algorithm, EventArgs.Empty);
             //algorithm.Start();
+
             Random random = new Random();
 
             CallCenter center = new CallCenter();
@@ -38,17 +39,26 @@ namespace HanoiTowers
             center.Call(5678);
             center.Call(1468);
             center.Call(9641);
-           
+
+
+
+            Console.WriteLine(center.Calls.Count);
+
             while (center.AreWaitingCalls())
+
             {
+
                 IncomingCall call = center.Answer("Marcin");
+
                 Log($"Call #{call.Id} from {call.ClientId} " +
-                    $"is answered by { call.Consultant}.");
+                    $"is answered by {call.Consultant}.");
+
                 Thread.Sleep(random.Next(1000, 10000));
+
                 center.End(call);
+
                 Log($"Call #{call.Id} from {call.ClientId} " +
-                    $"is ended by { call.Consultant}.");
-                Console.ReadLine();
+                    $"is ended by {call.Consultant}."); 
             }
         }
         private static void Algorithm_Visualize(object sender, EventArgs e)
@@ -133,7 +143,9 @@ namespace HanoiTowers
         public class CallCenter
         {
             private int _counter = 0;
+
             public Queue<IncomingCall> Calls { get; private set; }
+
             public CallCenter()
             {
                 Calls = new Queue<IncomingCall>();
@@ -146,6 +158,7 @@ namespace HanoiTowers
                     ClientId = clientId,
                     CallTime = DateTime.Now
                 };
+                Calls.Enqueue(call);
             }
             public IncomingCall Answer(string consultant)
             {
@@ -172,6 +185,6 @@ namespace HanoiTowers
         {
             Console.WriteLine($"[{DateTime.Now.ToString("HH:mm:ss")}] {text}");
         }
-
+        //Call Center with multiple Consultants
     }
 }
