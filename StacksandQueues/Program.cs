@@ -3,6 +3,7 @@
 using System;
 using System.Threading.Tasks;
 using System.Collections.Concurrent;
+using Priority_Queue;
 
 namespace StacksAndQueues
 {
@@ -60,16 +61,36 @@ namespace StacksAndQueues
             //        $"is ended by {call.Consultant}."); 
             //}
 
-            CallCenterConcurrent center1 = new CallCenterConcurrent();
+            //CallCenterConcurrent center1 = new CallCenterConcurrent();
 
-            Parallel.Invoke(
-                () => CallersAction(center1),
-                () => ConsultantAction(center1, "Ibukunoluwa", ConsoleColor.Red),
-                () => ConsultantAction(center1, "Temidayo", ConsoleColor.Yellow),
-                () => ConsultantAction(center1, "BinLaden" ,ConsoleColor.Green)
-            );
+            //Parallel.Invoke(
+            //    () => CallersAction(center1),
+            //    () => ConsultantAction(center1, "Ibukunoluwa", ConsoleColor.Red),
+            //    () => ConsultantAction(center1, "Temidayo", ConsoleColor.Yellow),
+            //    () => ConsultantAction(center1, "BinLaden" ,ConsoleColor.Green)
+            //);
+            //As you can see, the calls are served in the correct order.
+            //This means that the calls from clients with priority support
+            //are served earlier than calls from clients with the standard
+            //support plan, despite the fact that such calls need to wait
+            //much longer to be answered.
+            Random random = new Random();
 
+            CallCenterPriority center = new CallCenterPriority();
 
+            center.Call(1234);
+            center.Call(5678);
+            center.Call(1468);
+            center.Call(9641, true);
+
+            while(center.AreWaitingCalls())
+            {
+                IncomingCallP call = center.Answer("Marcio");
+                Log($"Call #{call.Id} from {call.ClientId} is answered by {call.Consultant} / Mode: {(call.IsPriority ? "priority" : "normal")}");
+                Thread.Sleep(random.Next(1000, 10000));
+                center.End(call);
+                Log($"Call #{call.Id} from {call.ClientId} is ended by {call.Consultant} / Mode: {(call.IsPriority ? "priority" : "normal")}");
+            }
 
         }
         private static void Algorithm_Visualize(object sender, EventArgs e)
@@ -281,16 +302,55 @@ namespace StacksAndQueues
                     Console.ForegroundColor = ConsoleColor.Gray;
 
                     Thread.Sleep(random.Next(500, 1000));
-                } else
+                }
+                else
                 {
                     Thread.Sleep(100);
                 }
 
             }
-
-            //Call center with priority support
-
+        }
+         //Call center with priority support
+         public class CallCenterPriority
+         {
+            int _counter = 0;
+            public SimplePriorityQueue<IncomingCallP> Calls { get; private set; }
+            public CallCenterPriority()
+            {
+                Calls = new SimplePriorityQueue<IncomingCallP>();
+            }
+            public void Call(int clientId, bool isPriority = false)
+            {
+                IncomingCallP call = new IncomingCallP()
+                {
+                    Id = ++_counter,
+                    ClientId = clientId,
+                    CallTime = DateTime.Now,
+                    IsPriority = isPriority
+                };
+                Calls.Enqueue(call, isPriority ? 0 : 1);
+            }
+            public IncomingCallP Answer(string consultant)
+            {
+                if (Calls.Count > 0)
+                {
+                    IncomingCallP call = Calls.Dequeue();
+                    call.Consultant = consultant;
+                    call.StartTime = DateTime.Now;
+                    return call;
+                }
+                return null;
+            }
+            public void End(IncomingCallP call)
+            {
+                call.EndTime = DateTime.Now;
+            }
+            public bool AreWaitingCalls()
+            {
+                return Calls.Count > 0;
+            }
 
         }
-    }
+
+        }
 }
