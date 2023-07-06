@@ -1,3 +1,31 @@
 ﻿<Properties StartupConfiguration="{0766330E-8BF4-4574-BD44-D3C671487642}|Default">
+  <MonoDevelop.Ide.ItemProperties.StacksandQueues PreferredExecutionTarget="MonoDevelop.Default" />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+    <Files>
+      <File FileName="Program.cs" Line="221" Column="33" />
+      <File FileName="HanoiTower.cs" Line="19" Column="47" />
+      <File FileName="README.md" Line="61" Column="1" />
+      <File FileName="IncomingCall.cs" Line="14" Column="41" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="StacksandQueues" expanded="True">
+            <Node name="StacksandQueues" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
 </Properties>

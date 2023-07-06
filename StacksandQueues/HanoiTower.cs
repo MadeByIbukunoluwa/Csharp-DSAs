@@ -1,4 +1,4 @@
-namespace HanoiTowers
+namespace StacksAndQueues
 {
     public class HanoiTower
     {

@@ -13,3 +13,5 @@
 /Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/StacksandQueues/obj/Debug/net7.0/StacksandQueues.pdb
 /Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/StacksandQueues/obj/Debug/net7.0/StacksandQueues.genruntimeconfig.cache
 /Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/StacksandQueues/obj/Debug/net7.0/ref/StacksandQueues.dll
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/StacksandQueues/bin/Debug/net7.0/PriorityQueue.dll
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/StacksandQueues/obj/Debug/net7.0/StacksandQueues.csproj.CopyComplete

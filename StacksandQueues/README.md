@@ -33,4 +33,29 @@ internal is the default if no access modifier is specified
 
 Struct members, including nested classes and structs, can be declared public , internal , or private .
 Class members, including nested classes and structs, can be public , protected internal , protected ,
-internal , private protected , or private 
+internal , private protected , or private
+
+
+For the Call Center with multiple Consultants , we need to make sure that if there are
+
+If there are more incoming calls than available consultants , a new call will be added to the queue
+and will wait until there is a consultant who can answer the call  If there are too many consultants and few calls,
+the consultants will wait for a call. To perform this task, you will create a few threads, which will access the queue.
+Therefore, you need to use the thread-safe version of the queue using the ConcurrentQueue class.
+
+
+Priority Queue
+
+We extend the concept of a queue by setting a priority for each element of the queue
+
+priority an be specified by an integer value, but it depends on the implementation,
+
+Whether smaller or higher values indicate higher priority
+
+in this case, the dequeue method will return the element with the highest priority
+
+the one with the highest priority will be added to the beginning of the queue
+
+the one with the lowest priority qill be placed at the end of the priority queue
+
+

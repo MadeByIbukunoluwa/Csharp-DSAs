@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "JBbMhEFn0GrsguzKupMbIH9olErCywQ1u55GlFTvTPtvQNYDVQh0MNgfX/24i9sxMIoG77dU5C2/1ROW9eUyPA==",
+  "dgSpecHash": "Box63Lfnm6T530KUxIirCcrYyiebZFDl2t5vUi61IQ0tZ/NV8rJdo5qsWuoPQ+wo39xKXKHFfTIBwL98TD9rrg==",
   "success": true,
   "projectFilePath": "/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/StacksandQueues/StacksandQueues.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/ibukunoluwaakintobi/.nuget/packages/optimizedpriorityqueue/5.1.0/optimizedpriorityqueue.5.1.0.nupkg.sha512"
+  ],
   "logs": []
 }
