@@ -349,8 +349,9 @@ namespace StacksAndQueues
             {
                 return Calls.Count > 0;
             }
+           }
 
-        }
-
-        }
+      }
 }
+
+
