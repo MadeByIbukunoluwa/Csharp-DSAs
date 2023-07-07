@@ -1,0 +1,15 @@
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/DictionariesandSets/obj/Debug/net7.0/DictionariesandSets.csproj.AssemblyReference.cache
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/DictionariesandSets/obj/Debug/net7.0/DictionariesandSets.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/DictionariesandSets/obj/Debug/net7.0/DictionariesandSets.AssemblyInfoInputs.cache
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/DictionariesandSets/obj/Debug/net7.0/DictionariesandSets.AssemblyInfo.cs
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/DictionariesandSets/obj/Debug/net7.0/DictionariesandSets.csproj.CoreCompileInputs.cache
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/DictionariesandSets/bin/Debug/net7.0/DictionariesandSets
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/DictionariesandSets/bin/Debug/net7.0/DictionariesandSets.deps.json
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/DictionariesandSets/bin/Debug/net7.0/DictionariesandSets.runtimeconfig.json
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/DictionariesandSets/bin/Debug/net7.0/DictionariesandSets.dll
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/DictionariesandSets/bin/Debug/net7.0/DictionariesandSets.pdb
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/DictionariesandSets/obj/Debug/net7.0/DictionariesandSets.dll
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/DictionariesandSets/obj/Debug/net7.0/refint/DictionariesandSets.dll
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/DictionariesandSets/obj/Debug/net7.0/DictionariesandSets.pdb
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/DictionariesandSets/obj/Debug/net7.0/DictionariesandSets.genruntimeconfig.cache
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/DictionariesandSets/obj/Debug/net7.0/ref/DictionariesandSets.dll
