@@ -21,5 +21,27 @@ is approaching the O(1) operation.
 
 The variable used in the loop , when you are looping through a dictionary is a KeyValuePair
 
+## Sorted Dictionary
+normally , if we need to present data from the collection sorted by keys , we need to sort them
+prior to presentation
+we can use this to keep keys sorted all the time 
 
 
+## drawbacks
+despite the automatic sorting advantages , the SortedDictionary class has performance drawbacks as
+retrieval , insertion and removal are O(logn) operations instead of O(n)
+As you can see, choosing a proper data structure is not an easy task and you should think carefully
+about the scenarios in which particular data structures will be used and take into account the both pros and cons.
+
+
+## Hashsets
+These data structures just store keys without values
+
+A set is a collection of distinct objects without duplicated
+elements and without a particular order.
+Therefore, you can only get to know whether a given element is in the set or not.
+The sets are strictly connected with the mathematical models and operations, such as
+union, intersection, subtraction, and symmetric difference.
+A set can store various data , such as string or integer values, you can also create
+a set with instances of a user defined class , as well as add or remove elements
+from the set at any time
