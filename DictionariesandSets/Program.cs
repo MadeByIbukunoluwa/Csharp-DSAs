@@ -156,7 +156,80 @@ namespace DictionariesAndSets
             } while (isCorrect);
 
             //Sorted Dictionaries
+            //Definitions
+            SortedDictionary<string, string> definitions = new SortedDictionary<string, string>();
+            do
+            {
+                Console.Write("choose an option [a] - add [l] - list");
+                ConsoleKeyInfo keyInfo = Console.ReadKey();
+                if (keyInfo.Key == ConsoleKey.A)
+                {
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("Enter a name");
+                    string name1  = Console.ReadLine();
+                    Console.Write("Enter the explanation");
+                    string explanation = Console.ReadLine();
+                    definitions[name1] = explanation;
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                }
+                else if (keyInfo.Key == ConsoleKey.L)
+                {
+                    Console.ForegroundColor = ConsoleColor.White;
+                    foreach(KeyValuePair<string,string> keyValuePair in definitions)
+                    {
+                        Console.WriteLine($"{keyValuePair.Key}: {keyValuePair.Value}");
+                    }
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("Do you want to exit the program? Press [y] (yes) or [n] (no).");
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    if (Console.ReadKey().Key == ConsoleKey.Y)
+                    {
+                        break;
+                    }
+                }
 
+            } while (true);
+
+            // Hash Sets
+            //Coupons
+            HashSet<int> useCoupons = new HashSet<int>();
+
+            do
+            {
+                Console.Write("Enter a coupon number");
+                string couponString = Console.ReadLine();
+                if (int.TryParse(couponString, out int coupon))
+                {
+                    if (useCoupons.Contains(coupon))
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("This coupon has already been used :-(");
+                        Console.ForegroundColor = ConsoleColor.Gray;
+                    }
+                    else
+                    {
+                        useCoupons.Add(coupon);
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("Thank you! :-)");
+                        Console.ForegroundColor = ConsoleColor.Gray;
+                    }
+                } else
+                {
+                    break;
+                }
+
+            } while (true);
+            Console.WriteLine();
+            Console.WriteLine("A list of used coupons");
+            foreach(int coupon in useCoupons)
+            {
+                Console.WriteLine(coupon);
+            }
+            //swimming pools 
         } 
     }
 }
