@@ -1,0 +1,15 @@
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/VariantsofTrees/bin/Debug/net7.0/VariantsofTrees
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/VariantsofTrees/bin/Debug/net7.0/VariantsofTrees.deps.json
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/VariantsofTrees/bin/Debug/net7.0/VariantsofTrees.runtimeconfig.json
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/VariantsofTrees/bin/Debug/net7.0/VariantsofTrees.dll
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/VariantsofTrees/bin/Debug/net7.0/VariantsofTrees.pdb
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/VariantsofTrees/obj/Debug/net7.0/VariantsofTrees.csproj.AssemblyReference.cache
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/VariantsofTrees/obj/Debug/net7.0/VariantsofTrees.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/VariantsofTrees/obj/Debug/net7.0/VariantsofTrees.AssemblyInfoInputs.cache
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/VariantsofTrees/obj/Debug/net7.0/VariantsofTrees.AssemblyInfo.cs
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/VariantsofTrees/obj/Debug/net7.0/VariantsofTrees.csproj.CoreCompileInputs.cache
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/VariantsofTrees/obj/Debug/net7.0/VariantsofTrees.dll
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/VariantsofTrees/obj/Debug/net7.0/refint/VariantsofTrees.dll
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/VariantsofTrees/obj/Debug/net7.0/VariantsofTrees.pdb
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/VariantsofTrees/obj/Debug/net7.0/VariantsofTrees.genruntimeconfig.cache
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/VariantsofTrees/obj/Debug/net7.0/ref/VariantsofTrees.dll
