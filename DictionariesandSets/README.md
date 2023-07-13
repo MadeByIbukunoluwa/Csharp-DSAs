@@ -45,3 +45,10 @@ union, intersection, subtraction, and symmetric difference.
 A set can store various data , such as string or integer values, you can also create
 a set with instances of a user defined class , as well as add or remove elements
 from the set at any time
+
+
+## Sorted Sets
+if a set can be defined as a collection of unique elements with no particular order, then how are there sorted sets??
+Well its simple, they are not really sorted sets but a combination of HashSets and Sorted Lists, it can be found
+in the systems.collections.generic namespace
+the sorted sets can be used if you want to have a collection of distinct objects without duplicated elements

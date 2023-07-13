@@ -5,6 +5,13 @@ namespace DictionariesAndSets
 {
     public class Program
     {
+        public static Random random = new Random();
+
+        private static bool GetRandomBoolean()
+        {
+            return random.Next(2) == 1;
+        }
+
         public static void Main(string[] args)
         {
             var hashtable = new Hashtable();
@@ -19,7 +26,7 @@ namespace DictionariesAndSets
             hashtable["key1"] = "value";
 
             //get all the entreis fron a HashTable
-            foreach( DictionaryEntry entry in hashtable)
+            foreach (DictionaryEntry entry in hashtable)
             {
                 Console.WriteLine($"{entry.Key} - {entry.Value}");
             }
@@ -48,7 +55,7 @@ namespace DictionariesAndSets
             }
             else
             {
-                foreach(DictionaryEntry entry in phoneBook)
+                foreach (DictionaryEntry entry in phoneBook)
                 {
                     Console.WriteLine($" - {entry.Key}: {entry.Value}");
                 }
@@ -79,7 +86,7 @@ namespace DictionariesAndSets
 
             try
             {
-                products.Add("5900004000","A3");
+                products.Add("5900004000", "A3");
             }
             catch (ArgumentException)
             {
@@ -89,9 +96,10 @@ namespace DictionariesAndSets
             if (products.Count == 0)
             {
                 Console.WriteLine("Empty");
-            } else
+            }
+            else
             {
-                foreach (KeyValuePair<string,string> product in products)
+                foreach (KeyValuePair<string, string> product in products)
                 {
                     Console.WriteLine($" - {product.Key} : {product.Value}");
                 }
@@ -145,13 +153,14 @@ namespace DictionariesAndSets
                             employee.LastName,
                             employee.PhoneNumber
                          );
-                    } else
+                    }
+                    else
                     {
                         Console.WriteLine("The employee with the given identifer does not exist");
                     }
                     Console.ForegroundColor = ConsoleColor.Gray;
                 }
-                
+
 
             } while (isCorrect);
 
@@ -166,7 +175,7 @@ namespace DictionariesAndSets
                 {
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("Enter a name");
-                    string name1  = Console.ReadLine();
+                    string name1 = Console.ReadLine();
                     Console.Write("Enter the explanation");
                     string explanation = Console.ReadLine();
                     definitions[name1] = explanation;
@@ -175,7 +184,7 @@ namespace DictionariesAndSets
                 else if (keyInfo.Key == ConsoleKey.L)
                 {
                     Console.ForegroundColor = ConsoleColor.White;
-                    foreach(KeyValuePair<string,string> keyValuePair in definitions)
+                    foreach (KeyValuePair<string, string> keyValuePair in definitions)
                     {
                         Console.WriteLine($"{keyValuePair.Key}: {keyValuePair.Value}");
                     }
@@ -217,19 +226,85 @@ namespace DictionariesAndSets
                         Console.WriteLine("Thank you! :-)");
                         Console.ForegroundColor = ConsoleColor.Gray;
                     }
-                } else
+                }
+                else
                 {
                     break;
                 }
 
             } while (true);
+
             Console.WriteLine();
             Console.WriteLine("A list of used coupons");
-            foreach(int coupon in useCoupons)
+            foreach (int coupon in useCoupons)
             {
                 Console.WriteLine(coupon);
             }
-            //swimming pools 
-        } 
+
+            //swimming pools
+
+            Dictionary<PoolTypeEnum, HashSet<int>> tickets = new Dictionary<PoolTypeEnum, HashSet<int>>()
+            {
+                {PoolTypeEnum.RECREATION, new HashSet<int>() },
+                {PoolTypeEnum.COMPETITION, new HashSet<int>() },
+                {PoolTypeEnum.THERMAL, new HashSet<int>() },
+                {PoolTypeEnum.KIDS, new HashSet<int>() }
+             };
+            for (int i = 1; i < 100; i++)
+            {
+                foreach(KeyValuePair<PoolTypeEnum,HashSet<int>> type in tickets)
+                {
+                    if (GetRandomBoolean())
+                    {
+                        type.Value.Add(i);
+                    }
+                }
+            }
+            Console.WriteLine("Number of visitors by a pool type:");
+            foreach(KeyValuePair<PoolTypeEnum,HashSet<int>> type in tickets)
+            {
+                Console.WriteLine($" - {type.Key.ToString().ToLower()} {type.Value.Count}");
+            }
+            PoolTypeEnum maxVisitors = tickets.OrderByDescending(t => t.Value.Count)
+                                              .Select(t => t.Key)
+                                               .FirstOrDefault();
+            Console.WriteLine($"Pool '{maxVisitors.ToString().ToLower()} was the most popular");
+
+            // Get the number of people who have visited at least one pool
+            // we will do this by creating the union of all sets and getting the count of the final set
+            HashSet<int> any = new HashSet<int>(tickets[PoolTypeEnum.THERMAL]);
+            any.UnionWith(tickets[PoolTypeEnum.COMPETITION]);
+            any.UnionWith(tickets[PoolTypeEnum.KIDS]);
+            any.UnionWith(tickets[PoolTypeEnum.RECREATION]);
+            Console.WriteLine($"{any.Count}people visited at least one pool.");
+
+            // get the number of people who have visited all pools
+            // we will do this by creatring the intersection of all sets
+
+            HashSet<int> all = new HashSet<int>(tickets[PoolTypeEnum.KIDS]);
+            all.IntersectWith(tickets[PoolTypeEnum.RECREATION]);
+            all.IntersectWith(tickets[PoolTypeEnum.THERMAL]);
+            all.IntersectWith(tickets[PoolTypeEnum.COMPETITION]);
+
+            //"Sorted" Sets
+            List<string> names = new List<string>()
+            {
+                "Ryan",
+                "Sinae",
+                "Boolocal",
+                "uand",
+                "Emily",
+               "marcin",
+               "James",
+               "Jane"
+            };
+            SortedSet<string> sorted = new SortedSet<string>(names, Comparer<string>
+                .Create((a, b) => a.ToLower().CompareTo(b.ToLower())));
+            foreach(string name2 in sorted)
+            {
+                Console.WriteLine(name);
+            }
+        }
     }
 }
+
