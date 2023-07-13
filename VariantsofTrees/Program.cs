@@ -28,7 +28,8 @@ namespace VariantsOfTrees
 
             company.Root = new TreeNode<Person>()
             {
-                Data = new Person(1, "Ibukunoluwa Akintobi", "Chief Executive Officer")
+                Data = new Person(1, "Ibukunoluwa Akintobi", "Chief Executive Officer"),
+                Parent = null
             };
             company.Root.Children = new List<TreeNode<Person>>()
             {
@@ -112,7 +113,78 @@ namespace VariantsOfTrees
                },
             };
             int heightOfPaula = company.Root.Children[2].Children[0].Children[0].GetHeight();
-            Console.WriteLine(heightOfPaula.ToString());
+            Console.WriteLine(heightOfPaula.ToString()); // 4 which is correct 
+
+
+            //Binary Trees
+            //Simple Quiz
+            BinaryTree<QuizItem> quiztree = GetTree();
+            BinaryTreeNode<QuizItem> node = quiztree.Root;
+
+            while (node != null)
+            {
+                if (node.Left != null || node.Right != null)
+                {
+                    Console.Write(node.Data.Text);
+                    switch(Console.ReadKey(true).Key)
+                    {
+                        case ConsoleKey.Y:
+                            WriteAnswer(" Yes");
+                            node = node.Left;
+                            break;
+                        case ConsoleKey.N:
+                            WriteAnswer(" No");
+                            node = node.Right;
+                            break;
+                    }
+                }
+                else
+                {
+                    WriteAnswer(node.Data.Text);
+                    node = null;
+                }
+            }
+
+
+            static BinaryTree<QuizItem> GetTree()
+            {
+                BinaryTree<QuizItem> tree = new BinaryTree<QuizItem>();
+                tree.Root = new BinaryTreeNode<QuizItem>()
+                {
+                    Data = new QuizItem("Have you completed the university"),
+                    Children = new List<TreeNode<QuizItem>>()
+                    {
+                        new BinaryTreeNode<QuizItem>()
+                        {
+                            Data = new QuizItem("Apply for a junior developer!")
+                        },
+                        new BinaryTreeNode<QuizItem>()
+                        {
+                            Data = new QuizItem("Will you find some time during the semester"),
+                            Children = new List<TreeNode<QuizItem>>()
+                            {
+                                new BinaryTreeNode<QuizItem>()
+                                {
+                                    Data = new QuizItem("Apply for our long-time internship program!")
+                                },
+                                new BinaryTreeNode<QuizItem>()
+                                {
+                                    Data = new QuizItem("Apply for our summer internship program!")
+                                },
+                            }
+                        },
+                    }
+                };
+                tree.Count = 9;
+                return tree;
+            }
+             static void WriteAnswer(string text)
+            {
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine(text);
+                Console.ForegroundColor = ConsoleColor.Gray;
+            }
+            //Binary Search Trees
         }
     }
 }
