@@ -6,7 +6,8 @@ public class BinaryTreeNode<T> : TreeNode<T>
     {
         get { return (BinaryTreeNode<T>)Children[0]; }
         set { Children[0] = value; }
-    }public BinaryTreeNode<T> Right
+    }
+    public BinaryTreeNode<T> Right
     {
         get { return (BinaryTreeNode<T>)Children[1]; }
         set { Children[1] = value; }
