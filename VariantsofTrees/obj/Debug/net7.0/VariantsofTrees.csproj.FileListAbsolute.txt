@@ -13,3 +13,7 @@
 /Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/VariantsofTrees/obj/Debug/net7.0/VariantsofTrees.pdb
 /Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/VariantsofTrees/obj/Debug/net7.0/VariantsofTrees.genruntimeconfig.cache
 /Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/VariantsofTrees/obj/Debug/net7.0/ref/VariantsofTrees.dll
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/VariantsofTrees/bin/Debug/net7.0/PommaLabs.Hippie.dll
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/VariantsofTrees/bin/Debug/net7.0/TreeLib.dll
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/VariantsofTrees/bin/Debug/net7.0/TreeLibInterface.dll
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/VariantsofTrees/obj/Debug/net7.0/VariantsofTrees.csproj.CopyComplete

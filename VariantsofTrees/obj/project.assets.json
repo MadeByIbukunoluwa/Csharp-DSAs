@@ -27,6 +27,40 @@
       },
       "adjunct-System.IComparableExtensions/2.0.0": {
         "type": "package"
+      },
+      "PommaLabs.Hippie/3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/PommaLabs.Hippie.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/PommaLabs.Hippie.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "TreeLib/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "TreeLibInterface": "1.1.1"
+        },
+        "compile": {
+          "lib/TreeLib.dll": {}
+        },
+        "runtime": {
+          "lib/TreeLib.dll": {}
+        }
+      },
+      "TreeLibInterface/1.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/TreeLibInterface.dll": {}
+        },
+        "runtime": {
+          "lib/TreeLibInterface.dll": {}
+        }
       }
     }
   },
@@ -98,10 +132,53 @@
         "adjunct-system.icomparableextensions.nuspec",
         "content/-/System/IComparableExtensions.cs"
       ]
+    },
+    "PommaLabs.Hippie/3.1.1": {
+      "sha512": "pTud91zqNwg5jdC2XEQtmPr30yJQZa7y103IWXtMXwglZtiCNOJHKyEaI42G5dhf+IDEzG48EX1ae31EH5PLlA==",
+      "type": "package",
+      "path": "pommalabs.hippie/3.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/netstandard2.0/PommaLabs.Hippie.dll",
+        "lib/netstandard2.0/PommaLabs.Hippie.xml",
+        "pommalabs.hippie.3.1.1.nupkg.sha512",
+        "pommalabs.hippie.nuspec"
+      ]
+    },
+    "TreeLib/1.1.1": {
+      "sha512": "PSZjV6iojy4XykhaOywsiF5UaOcPREspjkMk/AWu7SOvgr3yyIbQG2I3asqOPkDvrEyAO9V9WQsQGcvXecECWw==",
+      "type": "package",
+      "path": "treelib/1.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/TreeLib.XML",
+        "lib/TreeLib.dll",
+        "treelib.1.1.1.nupkg.sha512",
+        "treelib.nuspec"
+      ]
+    },
+    "TreeLibInterface/1.1.1": {
+      "sha512": "95cafHfuuWG2RzSy1nhpc5CUh0PebH4HyJtEtb0djsnI8K4GD+VeC6WJ5I0Xe1CwbCLL0drTJL8eKFqs7Nta3Q==",
+      "type": "package",
+      "path": "treelibinterface/1.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/TreeLibInterface.XML",
+        "lib/TreeLibInterface.dll",
+        "treelibinterface.1.1.1.nupkg.sha512",
+        "treelibinterface.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "PommaLabs.Hippie >= 3.1.1",
+      "TreeLib >= 1.1.1",
       "adjunct-System.DataStructures.AvlTree >= 2.0.0"
     ]
   },
@@ -142,6 +219,14 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
+          "PommaLabs.Hippie": {
+            "target": "Package",
+            "version": "[3.1.1, )"
+          },
+          "TreeLib": {
+            "target": "Package",
+            "version": "[1.1.1, )"
+          },
           "adjunct-System.DataStructures.AvlTree": {
             "target": "Package",
             "version": "[2.0.0, )"
@@ -166,5 +251,27 @@
         "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.203/RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'TreeLib 1.1.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "TreeLib",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'TreeLibInterface 1.1.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "TreeLibInterface",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }

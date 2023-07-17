@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "n9MDW01EpaLTJSrRtUnCcSNiiz0Y9jcpM5aXa6rh3IdK/AJkAJRYE0Q7j15IXZGqGqsYQqwre6CoRJyzBBw1LA==",
+  "dgSpecHash": "2oWHOJ4LMzFKm8oJxEnlC4WxydrjyiQrM7D4yLN8yhql+82xQvaFsRqxK+iuBgEsPEffoRD3JKiK5UsBmoUGRw==",
   "success": true,
   "projectFilePath": "/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/VariantsofTrees/VariantsofTrees.csproj",
   "expectedPackageFiles": [
@@ -8,7 +8,31 @@
     "/Users/ibukunoluwaakintobi/.nuget/packages/adjunct-system.datastructures.avltree/2.0.0/adjunct-system.datastructures.avltree.2.0.0.nupkg.sha512",
     "/Users/ibukunoluwaakintobi/.nuget/packages/adjunct-system.datastructures.binarytreebase/2.0.0/adjunct-system.datastructures.binarytreebase.2.0.0.nupkg.sha512",
     "/Users/ibukunoluwaakintobi/.nuget/packages/adjunct-system.datastructures.funccomparer/2.0.0/adjunct-system.datastructures.funccomparer.2.0.0.nupkg.sha512",
-    "/Users/ibukunoluwaakintobi/.nuget/packages/adjunct-system.icomparableextensions/2.0.0/adjunct-system.icomparableextensions.2.0.0.nupkg.sha512"
+    "/Users/ibukunoluwaakintobi/.nuget/packages/adjunct-system.icomparableextensions/2.0.0/adjunct-system.icomparableextensions.2.0.0.nupkg.sha512",
+    "/Users/ibukunoluwaakintobi/.nuget/packages/pommalabs.hippie/3.1.1/pommalabs.hippie.3.1.1.nupkg.sha512",
+    "/Users/ibukunoluwaakintobi/.nuget/packages/treelib/1.1.1/treelib.1.1.1.nupkg.sha512",
+    "/Users/ibukunoluwaakintobi/.nuget/packages/treelibinterface/1.1.1/treelibinterface.1.1.1.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'TreeLib 1.1.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "TreeLib",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'TreeLibInterface 1.1.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "TreeLibInterface",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }

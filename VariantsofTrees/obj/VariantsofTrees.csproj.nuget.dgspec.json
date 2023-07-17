@@ -38,6 +38,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "PommaLabs.Hippie": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "TreeLib": {
+              "target": "Package",
+              "version": "[1.1.1, )"
+            },
             "adjunct-System.DataStructures.AvlTree": {
               "target": "Package",
               "version": "[2.0.0, )"
