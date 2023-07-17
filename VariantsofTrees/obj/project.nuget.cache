@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "mtngYcNiuOO7lhikd/pIwrv7PS29Xyv9anpVYN1SeiMwHMmA9KWwa4X7X7YrLqIkhaJL1vNK2GAQviUS0PvMew==",
+  "dgSpecHash": "n9MDW01EpaLTJSrRtUnCcSNiiz0Y9jcpM5aXa6rh3IdK/AJkAJRYE0Q7j15IXZGqGqsYQqwre6CoRJyzBBw1LA==",
   "success": true,
   "projectFilePath": "/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/VariantsofTrees/VariantsofTrees.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/ibukunoluwaakintobi/.nuget/packages/adjunct-guard/2.0.0/adjunct-guard.2.0.0.nupkg.sha512",
+    "/Users/ibukunoluwaakintobi/.nuget/packages/adjunct-system.datastructures.avltree/2.0.0/adjunct-system.datastructures.avltree.2.0.0.nupkg.sha512",
+    "/Users/ibukunoluwaakintobi/.nuget/packages/adjunct-system.datastructures.binarytreebase/2.0.0/adjunct-system.datastructures.binarytreebase.2.0.0.nupkg.sha512",
+    "/Users/ibukunoluwaakintobi/.nuget/packages/adjunct-system.datastructures.funccomparer/2.0.0/adjunct-system.datastructures.funccomparer.2.0.0.nupkg.sha512",
+    "/Users/ibukunoluwaakintobi/.nuget/packages/adjunct-system.icomparableextensions/2.0.0/adjunct-system.icomparableextensions.2.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

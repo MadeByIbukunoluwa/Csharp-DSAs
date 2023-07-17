@@ -7,10 +7,31 @@
   "targets": {
     ".NETCoreApp,Version=v7.0": {
       "VariantsofTrees/1.0.0": {
+        "dependencies": {
+          "adjunct-System.DataStructures.AvlTree": "2.0.0"
+        },
         "runtime": {
           "VariantsofTrees.dll": {}
         }
-      }
+      },
+      "adjunct-Guard/2.0.0": {},
+      "adjunct-System.DataStructures.AvlTree/2.0.0": {
+        "dependencies": {
+          "adjunct-Guard": "2.0.0",
+          "adjunct-System.DataStructures.BinaryTreeBase": "2.0.0",
+          "adjunct-System.DataStructures.FuncComparer": "2.0.0",
+          "adjunct-System.IComparableExtensions": "2.0.0"
+        }
+      },
+      "adjunct-System.DataStructures.BinaryTreeBase/2.0.0": {
+        "dependencies": {
+          "adjunct-Guard": "2.0.0",
+          "adjunct-System.DataStructures.FuncComparer": "2.0.0",
+          "adjunct-System.IComparableExtensions": "2.0.0"
+        }
+      },
+      "adjunct-System.DataStructures.FuncComparer/2.0.0": {},
+      "adjunct-System.IComparableExtensions/2.0.0": {}
     }
   },
   "libraries": {
@@ -18,6 +39,41 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "adjunct-Guard/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-svjVrWH8gDvz5uedbI1A+8OdJWpbJfStWx5yniowHhrenqTu14Yi+w9ipXHw3GgHAAHPo5rVKCLr8nWsgYFZWQ==",
+      "path": "adjunct-guard/2.0.0",
+      "hashPath": "adjunct-guard.2.0.0.nupkg.sha512"
+    },
+    "adjunct-System.DataStructures.AvlTree/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mRcS31oIo5puM8JYVVIWM3R5HaYlvYYokbJ7wYYSELUOqdbe0xxkLgzpJvbeOmrz3F47iZ4bE7wCo7St0lojwA==",
+      "path": "adjunct-system.datastructures.avltree/2.0.0",
+      "hashPath": "adjunct-system.datastructures.avltree.2.0.0.nupkg.sha512"
+    },
+    "adjunct-System.DataStructures.BinaryTreeBase/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-g7z4PBTMSJ051Ez/ZjPJYo+6FlSz0258Mi/6dyOJVHQrChciTj8WJd+asv+bh9uWXMCbd+x2+H7hodxzjtGr4Q==",
+      "path": "adjunct-system.datastructures.binarytreebase/2.0.0",
+      "hashPath": "adjunct-system.datastructures.binarytreebase.2.0.0.nupkg.sha512"
+    },
+    "adjunct-System.DataStructures.FuncComparer/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yKgrRWZQcdtu5EfPwzXloHC9jG2p95KCkujjKHVHB/tDJdlP5JgANo0yl4QK74DBRJqBtaR7FLDeSzween6XBw==",
+      "path": "adjunct-system.datastructures.funccomparer/2.0.0",
+      "hashPath": "adjunct-system.datastructures.funccomparer.2.0.0.nupkg.sha512"
+    },
+    "adjunct-System.IComparableExtensions/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6Z6TVRc3tb9Az9BAFuunaQGeSp97XbQgYJc9orkxrMWlrSkBOdk2e8/cn2sDnHv4Gogp0xbhXY6bcRB9KW+2EQ==",
+      "path": "adjunct-system.icomparableextensions/2.0.0",
+      "hashPath": "adjunct-system.icomparableextensions.2.0.0.nupkg.sha512"
     }
   }
 }

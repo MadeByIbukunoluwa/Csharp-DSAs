@@ -1,11 +1,109 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "adjunct-Guard/2.0.0": {
+        "type": "package"
+      },
+      "adjunct-System.DataStructures.AvlTree/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "adjunct-Guard": "2.0.0",
+          "adjunct-System.DataStructures.BinaryTreeBase": "2.0.0",
+          "adjunct-System.DataStructures.FuncComparer": "2.0.0",
+          "adjunct-System.IComparableExtensions": "2.0.0"
+        }
+      },
+      "adjunct-System.DataStructures.BinaryTreeBase/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "adjunct-Guard": "2.0.0",
+          "adjunct-System.DataStructures.FuncComparer": "2.0.0",
+          "adjunct-System.IComparableExtensions": "2.0.0"
+        }
+      },
+      "adjunct-System.DataStructures.FuncComparer/2.0.0": {
+        "type": "package"
+      },
+      "adjunct-System.IComparableExtensions/2.0.0": {
+        "type": "package"
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "adjunct-Guard/2.0.0": {
+      "sha512": "svjVrWH8gDvz5uedbI1A+8OdJWpbJfStWx5yniowHhrenqTu14Yi+w9ipXHw3GgHAAHPo5rVKCLr8nWsgYFZWQ==",
+      "type": "package",
+      "path": "adjunct-guard/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "adjunct-guard.2.0.0.nupkg.sha512",
+        "adjunct-guard.nuspec",
+        "content/-/Guard.cs",
+        "content/-/Throw.cs"
+      ]
+    },
+    "adjunct-System.DataStructures.AvlTree/2.0.0": {
+      "sha512": "mRcS31oIo5puM8JYVVIWM3R5HaYlvYYokbJ7wYYSELUOqdbe0xxkLgzpJvbeOmrz3F47iZ4bE7wCo7St0lojwA==",
+      "type": "package",
+      "path": "adjunct-system.datastructures.avltree/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "adjunct-system.datastructures.avltree.2.0.0.nupkg.sha512",
+        "adjunct-system.datastructures.avltree.nuspec",
+        "content/-/System/DataStructures/AvlTree.cs",
+        "content/-/System/DataStructures/AvlTreeNode.cs"
+      ]
+    },
+    "adjunct-System.DataStructures.BinaryTreeBase/2.0.0": {
+      "sha512": "g7z4PBTMSJ051Ez/ZjPJYo+6FlSz0258Mi/6dyOJVHQrChciTj8WJd+asv+bh9uWXMCbd+x2+H7hodxzjtGr4Q==",
+      "type": "package",
+      "path": "adjunct-system.datastructures.binarytreebase/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "adjunct-system.datastructures.binarytreebase.2.0.0.nupkg.sha512",
+        "adjunct-system.datastructures.binarytreebase.nuspec",
+        "content/-/System/DataStructures/BinaryTreeBase.cs",
+        "content/-/System/DataStructures/BinaryTreeNode.cs"
+      ]
+    },
+    "adjunct-System.DataStructures.FuncComparer/2.0.0": {
+      "sha512": "yKgrRWZQcdtu5EfPwzXloHC9jG2p95KCkujjKHVHB/tDJdlP5JgANo0yl4QK74DBRJqBtaR7FLDeSzween6XBw==",
+      "type": "package",
+      "path": "adjunct-system.datastructures.funccomparer/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "adjunct-system.datastructures.funccomparer.2.0.0.nupkg.sha512",
+        "adjunct-system.datastructures.funccomparer.nuspec",
+        "content/-/System/DataStructures/FuncComparer.cs"
+      ]
+    },
+    "adjunct-System.IComparableExtensions/2.0.0": {
+      "sha512": "6Z6TVRc3tb9Az9BAFuunaQGeSp97XbQgYJc9orkxrMWlrSkBOdk2e8/cn2sDnHv4Gogp0xbhXY6bcRB9KW+2EQ==",
+      "type": "package",
+      "path": "adjunct-system.icomparableextensions/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "adjunct-system.icomparableextensions.2.0.0.nupkg.sha512",
+        "adjunct-system.icomparableextensions.nuspec",
+        "content/-/System/IComparableExtensions.cs"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "adjunct-System.DataStructures.AvlTree >= 2.0.0"
+    ]
   },
   "packageFolders": {
     "/Users/ibukunoluwaakintobi/.nuget/packages/": {}
@@ -43,6 +141,12 @@
     "frameworks": {
       "net7.0": {
         "targetAlias": "net7.0",
+        "dependencies": {
+          "adjunct-System.DataStructures.AvlTree": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
