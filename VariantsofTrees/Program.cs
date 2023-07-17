@@ -1,5 +1,8 @@
 ﻿
 // if the children property of the nodes didn't exist, we would be
+using TreeLib;
+
+using PommaLabs.Hippie;
 
 namespace VariantsOfTrees
 {
@@ -78,6 +81,7 @@ namespace VariantsOfTrees
 
         static public void Main(string[] args)
         {
+            // Simple tree 
             Tree<int> tree = new Tree<int>();
             tree.Root = new TreeNode<int>()
             {
@@ -298,6 +302,55 @@ namespace VariantsOfTrees
 
             Console.Write("\nPost-order traversal:\t");
             Console.Write(string.Join(",  ", binaryTree.Traverse(TraversalEnum.POSTORDER).Select(n => n.Data)));
+
+            // Avl tree
+
+            //Red black Trees
+            RedBlackTreeList<int> redBlackTree = new RedBlackTreeList<int>();
+            for (int i = 1; i <= 10; i++)
+            {
+                redBlackTree.Add(i);
+            }
+            redBlackTree.Remove(9);
+            bool contains = redBlackTree.ContainsKey(5);
+
+            Console.WriteLine("Does value exist" + (contains ? "yes" : "no"));
+
+            uint count = redBlackTree.Count;
+
+            redBlackTree.Greatest(out int greatest);
+
+            redBlackTree.Least(out int least);
+
+            Console.WriteLine($"{count} elements in the range {least} - {greatest}");
+
+            Console.WriteLine("Values:" + string.Join(", ", redBlackTree.GetEnumerable()));
+
+            Console.Write("Values: ");
+            foreach (EntryList<int> rbtnode in redBlackTree)
+            {
+                Console.Write(node + " ");
+            }
+            // Binary Heaps
+            // the package recommended in the book has been deprecated
+            //we are using https://www.nuget.org/packages/PommaLabs.Hippie/ instead
+
+
+            List<int> unsorted = new List<int>() { 50, 33, 78, -23, 90, 41 };
+
+            MultiHeap<int> heap = HeapFactory.NewBinaryHeap<int>();
+
+            unsorted.ForEach(i => heap.Add(i));
+
+            Console.WriteLine("Unsorted: " + string.Join(", ", unsorted));
+
+            List<int> sorted = new List<int>(heap.Count);
+
+            while(heap.Count > 0)
+            {
+                sorted.Add(heap.RemoveMin());
+            }
+            Console.WriteLine("Sorted: " + string.Join(", ", sorted));
 
             Console.ReadLine();
         }
