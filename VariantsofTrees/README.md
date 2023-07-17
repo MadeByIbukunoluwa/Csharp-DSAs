@@ -45,3 +45,63 @@ a binary search tree , the important role is performed by rotations , used to fi
 Performance of AVL tree - in the worst and best case scenarios of insertion , removal and lookup everything is O(logn)
 there is a significant improvment in the worst case scenarios in comparsion with the binary tree 
 
+Simple test to make BST unbalanced - just add ordered numbers to create a long and skinny tree
+
+## Red Black trees
+
+A red black tree also known as RBT is another variant of slef balancing binary trees
+It requires that the standard BST rules must be obeyed
+Each node must be red or black , thus you need to add additional data for a node that stores a color
+
+All nodes with values cannot be leaf nodes. For this reason, the NIL pseudo- nodes should be used as leaves
+in the tree, while all other nodes are internal ones. Moreover, all NIL pseudo-nodes must be black.
+If a node is red, both its children must be black.
+For any node, the number of black nodes on the route to a descendant leaf (that is, the NIL pseudo-node) must be the same.
+
+
+Similarly to AVL trees, RBTs also must maintain the rules after adding or removing a node. In this case, the process of
+restoring the RBT properties is even more complicated, because it involves both recoloring and rotations
+
+
+it is also worth noting the performance. In both average and worst-case scenarios, insertion, removal, and lookup
+are O(log n) operations, so they are the same as in the case of the AVL trees and much better in worst-case scenarios
+in comparison with the BSTs.
+
+
+## Binary Heaps 
+A heap is another variant of a tree , which exists in two versions min-heap and max heap
+
+   For min heap - the value fo each node must be greater or equal to the value of the parent node
+   For max heap - the value of each node must be lesss than or equal to the value of its parent node
+   that the root node always contains the smallest (in the min-heap) or the largest (in the max-heap) value.
+
+   binary heaps must adhere to the binary tree rule where each node cannot contain more than two children
+   levels of the tree must be fully filled except the last one
+   which must be filled from left to right and can have some empty space on the right.
+
+   The heap sort algorithm has O(n * log(n)) time complexity
+
+
+## Binomial Heaps
+
+   - consists of a set of binomial trees with different orders
+   - The binomial trees with order 0 is just a single node
+   - You can construct the tree with order n using two binomial trees with order n - 1
+
+   How can we know how many binomial trees should be located in the binomial trees should
+   be located in the binomial heap, as well as how many nodes should they contain ???
+
+   The answer could be a bit surprising, because you need to prepare the binary
+   representation of the number of nodes. As an example, let's create a binomial heap with 13 elements.
+   The number 13 has the following binary representation: 1101, namely 1*2^0 + 0*2^1 + 1*2^2 + 1*2^3.
+
+## Fibonacci heaps
+
+A Fibonacci heap is an interesting variant of heaps, which in some ways is similar to a binomial heap.
+First of all, it also consists of many trees, but there are no constraints regarding the shape of each tree,
+so it is much more flexible than the binomial heap. Moreover, it is allowed to have more than one tree with
+exactly the same shape in the heap.
+
+One of the important assumptions is that each tree is a min-heap. Thus, the minimum value in the whole
+Fibonacci heap is certainly a root node in one of the trees. Moreover, the presented data structure
+supports performing various operations in the lazy way.
