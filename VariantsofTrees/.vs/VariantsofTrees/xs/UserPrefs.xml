@@ -1,16 +1,29 @@
 ﻿<Properties StartupConfiguration="{8EECBEC9-C793-4FE8-833B-EA8E93E391F8}|Default">
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.VariantsofTrees PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BinarySearchTree/BinarySearchTree.cs">
     <Files>
-      <File FileName="Program.cs" Line="3" Column="1" />
+      <File FileName="Program.cs" Line="357" Column="1" />
+      <File FileName="Tree.cs" Line="12" Column="16" />
+      <File FileName="Quiz/QuizItem.cs" Line="8" Column="1" />
+      <File FileName="BinarySearchTree/BinarySearchTree.cs" Line="69" Column="55" />
+      <File FileName="Tree/TreeNode.cs" Line="17" Column="24" />
+      <File FileName="BinaryTree/BinaryTree.cs" Line="47" Column="37" />
+      <File FileName="Person.cs" Line="1" Column="1" />
+      <File FileName="BinaryTree/TraversalEnum.cs" Line="1" Column="1" />
+      <File FileName="README.md" Line="1" Column="1" />
+      <File FileName="BinaryTree/BinaryTreeNode.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="VariantsofTrees" expanded="True">
             <Node name="VariantsofTrees" expanded="True">
-              <Node name="Program.cs" selected="True" />
+              <Node name="BinarySearchTree" expanded="True">
+                <Node name="BinarySearchTree.cs" selected="True" />
+              </Node>
+              <Node name="BinaryTree" expanded="True" />
+              <Node name="Tree" expanded="True" />
             </Node>
           </Node>
         </State>

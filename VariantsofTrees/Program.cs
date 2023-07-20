@@ -352,6 +352,9 @@ namespace VariantsOfTrees
             }
             Console.WriteLine("Sorted: " + string.Join(", ", sorted));
 
+            MultiHeap<int> binomialHeap = HeapFactory.NewBinomialHeap<int>();
+            MultiHeap<int> fibonacciHeap = HeapFactory.NewFibonacciHeap<int>();
+
             Console.ReadLine();
         }
     }
