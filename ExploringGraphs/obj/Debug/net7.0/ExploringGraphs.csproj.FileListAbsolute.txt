@@ -1,0 +1,15 @@
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/ExploringGraphs/bin/Debug/net7.0/ExploringGraphs
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/ExploringGraphs/bin/Debug/net7.0/ExploringGraphs.deps.json
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/ExploringGraphs/bin/Debug/net7.0/ExploringGraphs.runtimeconfig.json
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/ExploringGraphs/bin/Debug/net7.0/ExploringGraphs.dll
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/ExploringGraphs/bin/Debug/net7.0/ExploringGraphs.pdb
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/ExploringGraphs/obj/Debug/net7.0/ExploringGraphs.csproj.AssemblyReference.cache
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/ExploringGraphs/obj/Debug/net7.0/ExploringGraphs.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/ExploringGraphs/obj/Debug/net7.0/ExploringGraphs.AssemblyInfoInputs.cache
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/ExploringGraphs/obj/Debug/net7.0/ExploringGraphs.AssemblyInfo.cs
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/ExploringGraphs/obj/Debug/net7.0/ExploringGraphs.csproj.CoreCompileInputs.cache
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/ExploringGraphs/obj/Debug/net7.0/ExploringGraphs.dll
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/ExploringGraphs/obj/Debug/net7.0/refint/ExploringGraphs.dll
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/ExploringGraphs/obj/Debug/net7.0/ExploringGraphs.pdb
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/ExploringGraphs/obj/Debug/net7.0/ExploringGraphs.genruntimeconfig.cache
+/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/ExploringGraphs/obj/Debug/net7.0/ref/ExploringGraphs.dll
