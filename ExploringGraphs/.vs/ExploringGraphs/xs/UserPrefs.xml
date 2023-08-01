@@ -1,3 +1,32 @@
 ﻿<Properties StartupConfiguration="{5A54E187-06E8-4859-9A5C-5BB6D51100E3}|Default">
+  <MonoDevelop.Ide.ItemProperties.ExploringGraphs PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Graph.cs">
+    <Files>
+      <File FileName="Graph.cs" Line="357" Column="54" />
+      <File FileName="Program.cs" Line="299" Column="52" />
+      <File FileName="Node.cs" Line="1" Column="1" />
+      <File FileName="Edge.cs" Line="1" Column="1" />
+      <File FileName="README.md" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ExploringGraphs" expanded="True">
+            <Node name="ExploringGraphs" expanded="True">
+              <Node name="Graph.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

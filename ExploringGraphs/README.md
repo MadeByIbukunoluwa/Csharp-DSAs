@@ -58,7 +58,19 @@ such as using depth-first search (DFS) or breadth-first search (BFS), it is stri
 the task of searching for a given node in the graph
 
 ## Depth First Search (DFS)
+Depth first search is a traversal algorithm were you visit a current node , check if any of the neighbours
+are visited , then visit the neighbour that is not visited , repeat for that next node, until
+you have traversed all the nodes in the graph.
+The algorithm tries to go as deep as possible nd then goes back to find the next unvisited neighbour
+that can be traversed 
+
+## Breadth first Search
+in BFS , we visit all the neighbours of th current node before we go to the next one and then
+proceed to the next level of nodes , until all the nodes in the graph have been traversed 
 
 
 
-
+## Prims Algorithm
+th additonal indicators next to the graph represent the minimum weight necessary to reach a node
+from any of its neighbours . By default, the starting node has such a value set to zeo while all others
+are set to inifinity

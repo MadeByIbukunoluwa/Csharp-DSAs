@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "EgHExmFIw/z99DPI+wZbc68kkeaz9NowliLimjpxkiJh1BjWXiAy0JF7LaLjPuONdGHLNn0C5LumL5+lVzO9SA==",
+  "dgSpecHash": "j+T3znwVPuOdR642pkmpk2NMfsi6ToiuIMD8wGftllMth25lc0xgHV1ND/e6fH2QY8RO4qBk17sk5j1ALwpe6Q==",
   "success": true,
   "projectFilePath": "/Users/ibukunoluwaakintobi/Desktop/Csharp-DSAs/ExploringGraphs/ExploringGraphs.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/ibukunoluwaakintobi/.nuget/packages/optimizedpriorityqueue/5.1.0/optimizedpriorityqueue.5.1.0.nupkg.sha512"
+  ],
   "logs": []
 }
